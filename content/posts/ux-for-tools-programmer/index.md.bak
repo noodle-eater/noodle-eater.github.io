@@ -72,7 +72,7 @@ The last aspect that usually feels not importan or does not contribute enough to
 
 To make our Inspector Tool more desireable, we can change our tools design and make it more eye catching. We can separate our list of data into left side and the right side for updating the data. Do not forget to add some good UI & color for the tools.
 
-![desireable.png](img/desireable.png)
+![desireable.png](desireable.png)
 
 **Being "More Human"**
 
