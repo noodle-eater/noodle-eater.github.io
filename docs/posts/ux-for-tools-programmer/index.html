@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>User Experience for Tools Development | Noodle Eater</title>
+<meta name="keywords" content="">
+<meta name="description" content="Recently I learn a book about &ldquo;Designing the User Experience of Game Development Tools&rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.
+What is User Experience?
+There are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,
+ Tools need to be, &ldquo;Useful, Usable and Desireable&rdquo;">
+<meta name="author" content="">
+<link rel="canonical" href="https://amdhamdani.github.io/posts/ux-for-tools-programmer/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.ec8da366ca2fb647537ccb7a8f6fa5b4e9cd3c7a0d3171dd2d3baad1e49c8bfc.css" integrity="sha256-7I2jZsovtkdTfMt6j2&#43;ltOnNPHoNMXHdLTuq0eSci/w=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js" integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://amdhamdani.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://amdhamdani.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://amdhamdani.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://amdhamdani.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://amdhamdani.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="User Experience for Tools Development" />
+<meta property="og:description" content="Recently I learn a book about &ldquo;Designing the User Experience of Game Development Tools&rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.
+What is User Experience?
+There are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,
+ Tools need to be, &ldquo;Useful, Usable and Desireable&rdquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amdhamdani.github.io/posts/ux-for-tools-programmer/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-01T23:27:23&#43;07:00" />
+<meta property="article:modified_time" content="2022-05-01T23:27:23&#43;07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="User Experience for Tools Development"/>
+<meta name="twitter:description" content="Recently I learn a book about &ldquo;Designing the User Experience of Game Development Tools&rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.
+What is User Experience?
+There are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,
+ Tools need to be, &ldquo;Useful, Usable and Desireable&rdquo;"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://amdhamdani.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "User Experience for Tools Development",
+      "item": "https://amdhamdani.github.io/posts/ux-for-tools-programmer/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "User Experience for Tools Development",
+  "name": "User Experience for Tools Development",
+  "description": "Recently I learn a book about \u0026ldquo;Designing the User Experience of Game Development Tools\u0026rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.\nWhat is User Experience?\nThere are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,\n Tools need to be, \u0026ldquo;Useful, Usable and Desireable\u0026rdquo;",
+  "keywords": [
+    
+  ],
+  "articleBody": "Recently I learn a book about “Designing the User Experience of Game Development Tools”, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.\nWhat is User Experience?\nThere are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,\n Tools need to be, “Useful, Usable and Desireable”\n A. Useful\nThe tool you make must fulfill user needs, or it will be useless. Ideally, these needs come from users \u0026 stakeholders. Before create your tools, you must know what your user \u0026 stakeholder needs, not what they want. You need to separate which one is needs \u0026 desire. Otherwise, you will have a bunch of task that you need to finish and it will make the development time longer.\nLet say that our studio need a tools to manage data of the game that in development. You inspect the developer activities, ask their needs and talk with the stakeholder. And you got this list of user stories.\n As a user, I want to be able to inspect the save data. As a user, I want to be able to change the data from admin panel. As a user, I want to export the save data into different format. As a user, I want to manipulate the game saved data. As a user, I want to change the save data in runtime.  We need to decide which one will be the needs \u0026 desire, if you do all at once you will not ship your tools. Not at a short time at least, but your studio need the tools as soon as possible.\nAfter discussion with the tools team we decide that these are the needs. Why these? First our tools need to show the user all the save data that the game has, otherwise it will be pointless to add more functionality, when they even do not know the data. And we can provide the with a functionality to manipulate the data.\n As a user, I want to be able to inspect the save data. As a user, I want to manipulate the game saved data.  Why we do not choose these? this features is awesome but we still do not need it. especially for exporting the data in the different format, I think we must standarize our save data rather that support many format, since it will give a burden when maintain it in the future. Changing save data from admin panel, will be a good features when our game is live so we can update our game from the admin panel without need to rebuild the game. But because we are still in the development phase, we can save this for next. Save data in runtime is also a good feature especially for QA so they can easily test the game, but this features is not needed yet now.\n As a user, I want to be able to change the data from admin panel. As a user, I want to export the save data into different format. As a user, I want to change the save data in runtime.  After a few days working on the main functionality, you finally come up with the basic version of your inspection tool. Now in the sprint review you can show this and you can proud of it, because you make it. And at the end of the sprint you can ship your product to your user. And waiting for their feedback while improving the current Inspector Tool.\nB. Usable\nThere are many definitions of usability, these definition include question such as.\n How efficient is it to use? How easy is it to learn? How well is the user protected from making mistakes? How satisfying is it to use?  In my opinion, usability itself is\n How me make our tool easy to use by other \u0026 reduce the chance of mistakes happen when using the tool.\n After release your Inspector Tool you get some feedback from programmer in your company that use the tool.\n This tool help me inspect the game data \u0026 I do not need to print everything The game getting error after I update some value I got confuse, the list below save button is the list of data?  Our tool already meet the needs of our user but it still not usable yet, we know it from our user feedback. First we need to analyze the feedback and understand why this is happen.\nIn the feedback we know that the user get some error when update the value, since we are dealing with json file. There is a probability the user write wrong json syntax. Rather than show all the json, we can create some field that will hold the json data. And to make use do not confuse with the list of json, we can create a box area and give it a title. And we can update our Inspector Tool.\nC. Desireable\nThe last aspect that usually feels not importan or does not contribute enough to UX. However, a tool that have good aesthetic \u0026 appealing design contributes not only to user satisfaction but also will make the user believe that the designer have taken their time to create high-quality, profesional tool and make user more confidence in using it.\nTo make our Inspector Tool more desireable, we can change our tools design and make it more eye catching. We can separate our list of data into left side and the right side for updating the data. Do not forget to add some good UI \u0026 color for the tools.\nBeing “More Human”\nThe tool you make must resemble interaction with a good friend, and a bad tools will make you interact with frustrating people and it will make you piss off.\n Create a tool that can be a good friend for user, so they will use it because they need it. Not because they do not have any choice.\n ",
+  "wordCount" : "1011",
+  "inLanguage": "en",
+  "datePublished": "2022-05-01T23:27:23+07:00",
+  "dateModified": "2022-05-01T23:27:23+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://amdhamdani.github.io/posts/ux-for-tools-programmer/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noodle Eater",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amdhamdani.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://amdhamdani.github.io/" accesskey="h" title="Noodle Eater (Alt + H)">Noodle Eater</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      User Experience for Tools Development
+    </h1>
+    <div class="post-meta"><span title='2022-05-01 23:27:23 +0700 +07'>May 1, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Recently I learn a book about &ldquo;Designing the User Experience of Game Development Tools&rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.</p>
+<p><strong>What is User Experience?</strong></p>
+<p>There are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,</p>
+<blockquote>
+<p>Tools need to be, &ldquo;Useful, Usable and Desireable&rdquo;</p>
+</blockquote>
+<p><strong>A. Useful</strong></p>
+<p>The tool you make must fulfill user needs, or it will be useless. Ideally, these needs come from users &amp; stakeholders. Before create your tools, you must know what your user &amp; stakeholder needs, not what they want. You need to separate which one is needs &amp; desire. Otherwise, you will have a bunch of task that you need to finish and it will make the development time longer.</p>
+<p>Let say that our studio need a tools to manage data of the game that in development. You inspect the developer activities, ask their needs and talk with the stakeholder. And you got this list of user stories.</p>
+<ul>
+<li>As a user, I want to be able to inspect the save data.</li>
+<li>As a user, I want to be able to change the data from admin panel.</li>
+<li>As a user, I want to export the save data into different format.</li>
+<li>As a user, I want to manipulate the game saved data.</li>
+<li>As a user, I want to change the save data in runtime.</li>
+</ul>
+<p>We need to decide which one will be the needs &amp; desire, if you do all at once you will not ship your tools. Not at a short time at least, but your studio need the tools as soon as possible.</p>
+<p>After discussion with the tools team we decide that these are the needs. Why these? First our tools need to show the user all the save data that the game has, otherwise it will be pointless to add more functionality, when they even do not know the data. And we can provide the with a functionality to manipulate the data.</p>
+<ul>
+<li>As a user, I want to be able to inspect the save data.</li>
+<li>As a user, I want to manipulate the game saved data.</li>
+</ul>
+<p>Why we do not choose these? this features is awesome but we still do not need it. especially for exporting the data in the different format, I think we must standarize our save data rather that support many format, since it will give a burden when maintain it in the future. Changing save data from admin panel, will be a good features when our game is live so we can update our game from the admin panel without need to rebuild the game. But because we are still in the development phase, we can save this for next. Save data in runtime is also a good feature especially for QA so they can easily test the game, but this features is not needed yet now.</p>
+<ul>
+<li>As a user, I want to be able to change the data from admin panel.</li>
+<li>As a user, I want to export the save data into different format.</li>
+<li>As a user, I want to change the save data in runtime.</li>
+</ul>
+<p>After a few days working on the main functionality, you finally come up with the basic version of your inspection tool. Now in the sprint review you can show this and you can proud of it, because you make it. And at the end of the sprint you can ship your product to your user. And waiting for their feedback while improving the current Inspector Tool.</p>
+<p><img loading="lazy" src="img/useful.png" alt="useful.png"  />
+</p>
+<p><strong>B. Usable</strong></p>
+<p>There are many definitions of usability, these definition include question such as.</p>
+<ul>
+<li>How efficient is it to use?</li>
+<li>How easy is it to learn?</li>
+<li>How well is the user protected from making mistakes?</li>
+<li>How satisfying is it to use?</li>
+</ul>
+<p>In my opinion, usability itself is</p>
+<blockquote>
+<p>How me make our tool easy to use by other &amp; reduce the chance of mistakes happen when using the tool.</p>
+</blockquote>
+<p>After release your Inspector Tool you get some feedback from programmer in your company that use the tool.</p>
+<ul>
+<li>This tool help me inspect the game data &amp; I do not need to print everything</li>
+<li>The game getting error after I update some value</li>
+<li>I got confuse, the list below save button is the list of data?</li>
+</ul>
+<p>Our tool already meet the needs of our user but it still not usable yet, we know it from our user feedback. First we need to analyze the feedback and understand why this is happen.</p>
+<p>In the feedback we know that the user get some error when update the value, since we are dealing with json file. There is a probability the user write wrong json syntax. Rather than show all the json, we can create some field that will hold the json data. And to make use do not confuse with the list of json, we can create a box area and give it a title. And we can update our Inspector Tool.</p>
+<p><img loading="lazy" src="img/usable.png" alt="usable.png"  />
+</p>
+<p><strong>C. Desireable</strong></p>
+<p>The last aspect that usually feels not importan or does not contribute enough to UX. However, a tool that have good aesthetic &amp; appealing design contributes not only to user satisfaction but also will make the user believe that the designer have taken their time to create high-quality, profesional tool and make user more confidence in using it.</p>
+<p>To make our Inspector Tool more desireable, we can change our tools design and make it more eye catching. We can separate our list of data into left side and the right side for updating the data. Do not forget to add some good UI &amp; color for the tools.</p>
+<p><img loading="lazy" src="desireable.png" alt="desireable.png"  />
+</p>
+<p><strong>Being &ldquo;More Human&rdquo;</strong></p>
+<p>The tool you make must resemble interaction with a good friend, and a bad tools will make you interact with frustrating people and it will make you piss off.</p>
+<blockquote>
+<p>Create a tool that can be a good friend for user, so they will use it because they need it. Not because they do not have any choice.</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://amdhamdani.github.io/">Noodle Eater</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
