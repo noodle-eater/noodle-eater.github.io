@@ -35,8 +35,8 @@ There are many definitions of user experience. The popular one is from Elizabeth
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://amdhamdani.github.io/posts/create-in-game-console-for-unity/</guid>
-      <description>Intro When you working on your game, you mostly also want to debug, know the process of your game, take a look at the log you create for that game. It&amp;rsquo;s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it&amp;rsquo;s already became executable files e.g .exe, .apk etc.
-In Android you can open terminal and show the log cat but the experience is painfull since it show all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we does not need all the log from our device.</description>
+      <description>Intro When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc.
+In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device.</description>
     </item>
     
   </channel>

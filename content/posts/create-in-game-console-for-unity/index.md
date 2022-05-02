@@ -6,13 +6,15 @@ draft: false
 
 # Intro
 
-When you working on your game, you mostly also want to debug, know the process of your game, take a look at the log you create for that game. It's easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it's already became executable files e.g .exe, .apk etc. 
+When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc. 
 
-In Android you can open terminal and show the log cat but the experience is painfull since it show all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we does not need all the log from our device. We only need specific log from the game. Or may be simply because of the Laptop/PC is reach it's limit so we can not open android studio.
+In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device. We only need a specific log from the game. Or maybe simply because of the Laptop/PC is reached its limit so we can not open android studio.
 
-At this point, we can have a in game debug console for our games and it will be better for us if we can use it across our game. So we can reduce the time for us to make another debug console.
+![Android-Console](img/android-log.png)
 
-I will use unity in here, you can do the same idea in other framework/engine. In Unity Asset Store. you can find some free and ready to use in-game console. But my goal writing this is, I want to explore and learn how we can create our own in-game console that will fit our need. And sometimes I found my self repeating same task when testing thirdparty, and it will be better when I can have debugger to help me test the thirdparty.
+At this point, we can have an in-game debug console for our games and it will be better for us if we can use it across our game. So we can reduce the time for us to make another debug console.
+
+I will use unity in here, you can do the same idea in other frameworks/engine. In the Unity Asset Store. you can find some free and ready to use the in-game console. But my goal writing this is, I want to explore and learn how we can create our own in-game console that will fit our need. And sometimes I found my self repeating the same task when testing third-party, and it will be better when I can have debugger to help me test the third-party.
 
 # Design
 
