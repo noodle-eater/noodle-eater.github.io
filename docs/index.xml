@@ -6,17 +6,27 @@
     <description>Recent content on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 00:01:43 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity Automatic Localization System</title>
+      <link>https://amdhamdani.github.io/posts/unity-automatic-localization-system/</link>
+      <pubDate>Mon, 02 May 2022 00:01:43 +0700</pubDate>
+      
+      <guid>https://amdhamdani.github.io/posts/unity-automatic-localization-system/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>User Experience for Tools Development</title>
       <link>https://amdhamdani.github.io/posts/ux-for-tools-programmer/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://amdhamdani.github.io/posts/ux-for-tools-programmer/</guid>
-      <description>Recently I learn a book about &amp;ldquo;Designing the User Experience of Game Development Tools&amp;rdquo;, the book is pretty straight forward and easy to understand. As a tools programmer this is a book that I must read, in order to make my tools better.
+      <description>Recently I learn a book about “Designing the User Experience of Game Development Tools”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.
 What is User Experience?
-There are many definition about user experience, but from the I read. The populer one is from Elizabeth Sanders,
- Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;</description>
+There are many definitions of user experience. The popular one is from Elizabeth Sanders,
+ Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;
+ A. Useful</description>
     </item>
     
     <item>
