@@ -1,6 +1,6 @@
 ---
 title: "Smart Framework"
-date: 2022-05-02T10:21:36+07:00
+date: 2021-04-21
 draft: false
 ---
 
