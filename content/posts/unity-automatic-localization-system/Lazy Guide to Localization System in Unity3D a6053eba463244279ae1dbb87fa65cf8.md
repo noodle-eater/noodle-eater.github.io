@@ -1,8 +1,7 @@
----
-title: "Unity Automatic Localization System"
-date: 2022-05-02T00:01:43+07:00
-draft: false
----
+# Lazy Guide to Localization System in Unity3D
+
+Notes: InstanceID is not persistent
+Tags: Published
 
 Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.
 
@@ -16,7 +15,7 @@ I assign the text one by one and add a key for the JSON, then export it into a J
 
 But as time pass and the game get more content, I figure out that this kind of system is not good, because we have many texts and the enum will get bigger too. And also because the texts are scattered in ScriptableObject, Scripts, GameObject.
 
-![Piscik-Flow.png](img/Piscik-Flow.png)
+![Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Flow.png](Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Flow.png)
 
 I evaluated again my localization system design and found that this system design diagram is complicated. I thought of other approach and each time I come with an approach, I create another diagram to figure it how the system will look like, how they will interact with each other, how complex the system, and is it meet our need or not. 
 
@@ -38,14 +37,14 @@ I evaluated again my localization system design and found that this system desig
 
 Our time got more strict, We do not have much more time to find, drag and drop all the localization. I decide to use the Hash Code provided in Unity API. The hash code of the text will be taken as the key in JSON. The game itself changes from using UI Text into Text Mesh Pro because we need Text Mesh Pro features. Before diving into code, I made a diagram for the system that looks a lot simpler than the previous one.
 
-![Piscik-Page-2.png](img/Piscik-Page-2.png)
+![Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Page-2.png](Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Page-2.png)
 
 I collected all the Text Mesh Pro components in the scene using `Resources.FindObjectsOfTypeAll`
 and write it into a JSON file, I do a similar thing for the scriptable object too, but I just drag and drop the ScriptableObject into the list in the editor and write it into JSON. 
 
 The localization files consist of a hash code of the text for its key and the text itself is the value. The game will get the localization JSON from the server. I attach the Localization Component script into each GameObject that has Text Mesh Pro. It will directly replace the Text Mesh Pro string text with the localized text using the hash code from the text in the UI.
 
-![Piscik-Page-2-1.png](img/Piscik-Page-2-1.png)
+![Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Page-2-1.png](Lazy%20Guide%20to%20Localization%20System%20in%20Unity3D%20a6053eba463244279ae1dbb87fa65cf8/Piscik-Page-2-1.png)
 
 ### Pros
 
