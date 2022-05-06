@@ -57,6 +57,8 @@ int32 totalSpawned;
 
 ---
 
-The code above is not tested, and used for reference purpose. I hope it will be helpful, I hope I can update it again in the future.
+The code above is not tested, and used for reference only. 
+
+I hope it will be helpful
 
 Cheers 😊
