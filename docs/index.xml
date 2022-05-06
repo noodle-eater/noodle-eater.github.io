@@ -6,7 +6,17 @@
     <description>Recent content on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 May 2022 00:01:43 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 21:42:25 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unreal Engine Overflow</title>
+      <link>https://amdhamdani.github.io/posts/ue-overflow/</link>
+      <pubDate>Fri, 06 May 2022 21:42:25 +0700</pubDate>
+      
+      <guid>https://amdhamdani.github.io/posts/ue-overflow/</guid>
+      <description>Recently, I start using Unreal Engine to develop games. I did not have proper C++ or Unreal Engine knowledge, I usually use Unity and C#. while learn and use it, I stumbled across some problems. So I decide to make some notes that I can use and share with other.
+ Print Enum Into FString StaticEnum&amp;lt;ENUM_TYPE&amp;gt;()-&amp;gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &amp;#34;Item Name: {ItemName}&amp;#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&amp;#34;ItemName&amp;#34;), itemName); Loop UDataTable itemDT-&amp;gt;ForeachRow&amp;lt;FItemInfo&amp;gt;(&amp;#34;FindItem&amp;#34;, [&amp;amp;](const FName&amp;amp; key, const FItemInfo&amp;amp; item) {  // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&amp;gt;FindRow&amp;lt;FItemInfo&amp;gt;(ROW_NAME, &amp;#34;FindItem&amp;#34;); Create UObject Instance UTextBlock* text = NewObject&amp;lt;UTextBlock&amp;gt;(btn, FName(&amp;#34;text&amp;#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&amp;#34;YOUR_CONDITION&amp;#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &amp;#34;1&amp;#34;, ClampMax = &amp;#34;10&amp;#34;)) int32 totalSpawned;  The code above is not tested, and used for reference purpose.</description>
+    </item>
+    
     <item>
       <title>Unity Automatic Localization System</title>
       <link>https://amdhamdani.github.io/posts/unity-automatic-localization-system/</link>
