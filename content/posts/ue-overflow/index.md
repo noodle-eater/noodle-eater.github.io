@@ -55,6 +55,24 @@ UPROPERTY(EditAnywhere, meta = (ClampMin = "1", ClampMax = "10"))
 int32 totalSpawned;
 ```
 
+### Instantiate a UObject/Blueprint/WBP
+
+```cpp
+MyClass* instance = NewObject<MyClass>();
+
+UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+TSubclassOf<MyClass> MyClassType;
+
+// UObject Subclass
+NewObject<ActorClass>(MyClassType);
+
+// Actor Subclass
+GetWorld()->SpawnActor<ActorClass>(MyClassType);
+
+// Widget Subclass
+MyWidget* widget = CreateWidget<MyWidget>(this, MyWidgetType);
+```
+
 ---
 
 The code above is not tested and is used for reference only.
