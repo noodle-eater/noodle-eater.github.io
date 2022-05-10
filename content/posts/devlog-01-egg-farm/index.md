@@ -3,7 +3,8 @@ title: "#1 Egg Farm Update"
 date: 2022-05-10T21:38:10+07:00
 draft: false
 ---
-Welcome to the first update for Egg Farm, the game title may change in the future. 
+
+Welcome to the first update for Egg Farm, the game title may change in the future.
 
 Egg Farm is a relaxing mini farming game, where you can just sit and interact with everything inside the game, plant crops, and ranch animals, and design your own farm.
 
