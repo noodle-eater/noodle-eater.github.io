@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 21:42:25 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 May 2022 21:38:10 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#1 Egg Farm Update</title>
+      <link>https://amdhamdani.github.io/posts/devlog-01-egg-farm/</link>
+      <pubDate>Tue, 10 May 2022 21:38:10 +0700</pubDate>
+      
+      <guid>https://amdhamdani.github.io/posts/devlog-01-egg-farm/</guid>
+      <description>Welcome to the first update for Egg Farm, the game title may change in the future.
+Egg Farm is a relaxing mini farming game, where you can just sit and interact with everything inside the game, plant crops, and ranch animals, and design your own farm.
+Since this is a mini-game there will not be many features existing, although I still add more features that seem fun.
+There is still more work that needs to be done to finish this game.</description>
+    </item>
+    
     <item>
       <title>Unreal Engine Overflow</title>
       <link>https://amdhamdani.github.io/posts/ue-overflow/</link>
