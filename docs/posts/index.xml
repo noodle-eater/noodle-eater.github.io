@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 May 2022 21:38:10 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 22:21:21 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GameObject Name Redirector in Unity</title>
+      <link>https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/</link>
+      <pubDate>Wed, 11 May 2022 22:21:21 +0700</pubDate>
+      
+      <guid>https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/</guid>
+      <description>Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.
+A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.</description>
+    </item>
+    
     <item>
       <title>#1 Egg Farm Update</title>
       <link>https://amdhamdani.github.io/posts/devlog-01-egg-farm/</link>
