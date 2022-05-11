@@ -6,9 +6,9 @@ draft: false
 
 ## Intro
 
-This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is `FormerlySerializedAsAttribute` in Unity, it is used to rename a field without losing its serialized value. 
-
 A few days ago my friend stumbled across a problem because of the usage of `GameObject.Find`, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
+
+In Unity, There is `FormerlySerializedAsAttribute`, which is used to rename a field without losing its serialized value.
 
 ## Structure
 

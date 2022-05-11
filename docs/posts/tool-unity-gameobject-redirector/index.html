@@ -7,8 +7,10 @@
 <meta name="robots" content="index, follow">
 <title>GameObject Name Redirector in Unity | Noodle Eater</title>
 <meta name="keywords" content="">
-<meta name="description" content="Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.
-A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.">
+<meta name="description" content="Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
+In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
+Structure Data   GameObjects
+This data comes from Unity Engine itself, to retrieve this I use">
 <meta name="author" content="">
 <link rel="canonical" href="https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.ec8da366ca2fb647537ccb7a8f6fa5b4e9cd3c7a0d3171dd2d3baad1e49c8bfc.css" integrity="sha256-7I2jZsovtkdTfMt6j2&#43;ltOnNPHoNMXHdLTuq0eSci/w=" rel="preload stylesheet" as="style">
@@ -58,8 +60,10 @@ A few days ago my friend stumbled across a problem because of the usage of GameO
 
     </style>
 </noscript><meta property="og:title" content="GameObject Name Redirector in Unity" />
-<meta property="og:description" content="Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.
-A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem." />
+<meta property="og:description" content="Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
+In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
+Structure Data   GameObjects
+This data comes from Unity Engine itself, to retrieve this I use" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-11T22:21:21&#43;07:00" />
@@ -67,8 +71,10 @@ A few days ago my friend stumbled across a problem because of the usage of GameO
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GameObject Name Redirector in Unity"/>
-<meta name="twitter:description" content="Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.
-A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem."/>
+<meta name="twitter:description" content="Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
+In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
+Structure Data   GameObjects
+This data comes from Unity Engine itself, to retrieve this I use"/>
 
 
 <script type="application/ld+json">
@@ -97,12 +103,12 @@ A few days ago my friend stumbled across a problem because of the usage of GameO
   "@type": "BlogPosting",
   "headline": "GameObject Name Redirector in Unity",
   "name": "GameObject Name Redirector in Unity",
-  "description": "Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.\nA few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.",
+  "description": "Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.\nIn Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.\nStructure Data   GameObjects\nThis data comes from Unity Engine itself, to retrieve this I use",
   "keywords": [
     
   ],
-  "articleBody": "Intro This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is FormerlySerializedAsAttribute in Unity, it is used to rename a field without losing its serialized value.\nA few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.\nStructure Data   GameObjects\nThis data comes from Unity Engine itself, to retrieve this I use\nResources.FindObjectsOfTypeAll(typeof(GameObject));   ScriptableObject\nThe scriptable object is used to store all the game objects. I create a custom class to hold the required data.\npublic class NameConfig {  public int hashCode;  public string oldName;  public string newName; }  The hash code is the game object hash code, it uses to check whether a game object name is changed or not. Old name store the current game object name. New name store the new game object name.    System Since I can not find any event for rename I use EditorApplication.hierarchyChanged, below is the step I do to check rename in the game object.\n Listen to EditorApplication.hierarchyChanged. When there is any change in hierarchy, Find the data that match the hash code of the current game object. If any change then stores the new name otherwise clear it.  I also use a MenuItem to create a menu to register all the game objects manually. It will directly store the data in the ScriptableObject, I use it because working with ScriptableObject is easy and does not require any parsing.\nAPI I want to override GameObject.Find but it seems I can’t do that, so I create an extension method so it gonna looks more natural,\ngameObject.FindByName(\"game object name\"); Conclusion The GameObject.Find can be solved using redirector, but it is gonna need more improvement in the future. This experiment’s purpose is to be a proof of concept. But it gonna need more effort to make a better and more advanced version of the redirector.\nImprovement  Make sure if the hash code is persistent, I am not testing this yet. Change ScriptableObject to store data into text-based, e.g json, csv. Asset redirector, this gonna need to connect between the redirector data and the engine itself, besides the redirector needs to be compatible with the engine too. Script Redirector, use hash code to track any changes, basically similar to this experiment.  You can take a look at the code here.\n Thank you for reading 😃 I hope you enjoy it.\nHave a nice day.\n",
-  "wordCount" : "425",
+  "articleBody": "Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.\nIn Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.\nStructure Data   GameObjects\nThis data comes from Unity Engine itself, to retrieve this I use\nResources.FindObjectsOfTypeAll(typeof(GameObject));   ScriptableObject\nThe scriptable object is used to store all the game objects. I create a custom class to hold the required data.\npublic class NameConfig {  public int hashCode;  public string oldName;  public string newName; }  The hash code is the game object hash code, it uses to check whether a game object name is changed or not. Old name store the current game object name. New name store the new game object name.    System Since I can not find any event for rename I use EditorApplication.hierarchyChanged, below is the step I do to check rename in the game object.\n Listen to EditorApplication.hierarchyChanged. When there is any change in hierarchy, Find the data that match the hash code of the current game object. If any change then stores the new name otherwise clear it.  I also use a MenuItem to create a menu to register all the game objects manually. It will directly store the data in the ScriptableObject, I use it because working with ScriptableObject is easy and does not require any parsing.\nAPI I want to override GameObject.Find but it seems I can’t do that, so I create an extension method so it gonna looks more natural,\ngameObject.FindByName(\"game object name\"); Conclusion The GameObject.Find can be solved using redirector, but it is gonna need more improvement in the future. This experiment’s purpose is to be a proof of concept. But it gonna need more effort to make a better and more advanced version of the redirector.\nImprovement  Make sure if the hash code is persistent, I am not testing this yet. Change ScriptableObject to store data into text-based, e.g json, csv. Asset redirector, this gonna need to connect between the redirector data and the engine itself, besides the redirector needs to be compatible with the engine too. Script Redirector, use hash code to track any changes, basically similar to this experiment.  You can take a look at the code here.\n Thank you for reading 😃 I hope you enjoy it.\nHave a nice day.\n",
+  "wordCount" : "412",
   "inLanguage": "en",
   "datePublished": "2022-05-11T22:21:21+07:00",
   "dateModified": "2022-05-11T22:21:21+07:00",
@@ -178,8 +184,8 @@ A few days ago my friend stumbled across a problem because of the usage of GameO
 </div>
   </header> 
   <div class="post-content"><h2 id="intro">Intro<a hidden class="anchor" aria-hidden="true" href="#intro">#</a></h2>
-<p>This is an experimental tool inspired by the Unreal Engine redirector for Unity. There is <code>FormerlySerializedAsAttribute</code> in Unity, it is used to rename a field without losing its serialized value.</p>
 <p>A few days ago my friend stumbled across a problem because of the usage of <code>GameObject.Find</code>, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.</p>
+<p>In Unity, There is <code>FormerlySerializedAsAttribute</code>, which is used to rename a field without losing its serialized value.</p>
 <h2 id="structure">Structure<a hidden class="anchor" aria-hidden="true" href="#structure">#</a></h2>
 <p><img loading="lazy" src="img/structure.png" alt="Experimental-Tool-Redirector.drawio.png"  />
 </p>
