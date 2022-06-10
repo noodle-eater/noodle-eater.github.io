@@ -6,7 +6,17 @@
     <description>Recent content on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 May 2022 22:21:21 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2022 21:57:37 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#2 Egg Farm Update</title>
+      <link>https://amdhamdani.github.io/posts/devlog-02-egg-farm/</link>
+      <pubDate>Fri, 10 Jun 2022 21:57:37 +0700</pubDate>
+      
+      <guid>https://amdhamdani.github.io/posts/devlog-02-egg-farm/</guid>
+      <description>Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping me keep working on my games, I am glad start writing this blog actually. And these are the update of the game.
+Sheep Instead of putting the sheep inside a cage, I decide to let them roam in the field and search for food.</description>
+    </item>
+    
     <item>
       <title>GameObject Name Redirector in Unity</title>
       <link>https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/</link>
