@@ -2,6 +2,7 @@
 title: "Smart Framework"
 date: 2021-04-21
 draft: false
+tags: ["productivity"]
 ---
 
 I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.

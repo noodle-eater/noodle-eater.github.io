@@ -2,6 +2,7 @@
 title: "GameObject Name Redirector in Unity"
 date: 2022-05-11T22:21:21+07:00
 draft: false
+tags: ["tool"]
 ---
 
 ## Intro

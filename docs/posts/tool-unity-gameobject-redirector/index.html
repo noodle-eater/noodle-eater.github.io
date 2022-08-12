@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>GameObject Name Redirector in Unity | Noodle Eater</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="tool">
 <meta name="description" content="Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
 In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
 Structure Data   GameObjects
@@ -105,7 +105,7 @@ This data comes from Unity Engine itself, to retrieve this I use"/>
   "name": "GameObject Name Redirector in Unity",
   "description": "Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.\nIn Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.\nStructure Data   GameObjects\nThis data comes from Unity Engine itself, to retrieve this I use",
   "keywords": [
-    
+    "tool"
   ],
   "articleBody": "Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.\nIn Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.\nStructure Data   GameObjects\nThis data comes from Unity Engine itself, to retrieve this I use\nResources.FindObjectsOfTypeAll(typeof(GameObject));   ScriptableObject\nThe scriptable object is used to store all the game objects. I create a custom class to hold the required data.\npublic class NameConfig {  public int hashCode;  public string oldName;  public string newName; }  The hash code is the game object hash code, it uses to check whether a game object name is changed or not. Old name store the current game object name. New name store the new game object name.    System Since I can not find any event for rename I use EditorApplication.hierarchyChanged, below is the step I do to check rename in the game object.\n Listen to EditorApplication.hierarchyChanged. When there is any change in hierarchy, Find the data that match the hash code of the current game object. If any change then stores the new name otherwise clear it.  I also use a MenuItem to create a menu to register all the game objects manually. It will directly store the data in the ScriptableObject, I use it because working with ScriptableObject is easy and does not require any parsing.\nAPI I want to override GameObject.Find but it seems I can’t do that, so I create an extension method so it gonna looks more natural,\ngameObject.FindByName(\"game object name\"); Conclusion The GameObject.Find can be solved using redirector, but it is gonna need more improvement in the future. This experiment’s purpose is to be a proof of concept. But it gonna need more effort to make a better and more advanced version of the redirector.\nImprovement  Make sure if the hash code is persistent, I am not testing this yet. Change ScriptableObject to store data into text-based, e.g json, csv. Asset redirector, this gonna need to connect between the redirector data and the engine itself, besides the redirector needs to be compatible with the engine too. Script Redirector, use hash code to track any changes, basically similar to this experiment.  You can take a look at the code here.\n Thank you for reading 😃 I hope you enjoy it.\nHave a nice day.\n",
   "wordCount" : "412",
@@ -243,6 +243,7 @@ This data comes from Unity Engine itself, to retrieve this I use"/>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://noodle-eater.github.io/tags/tool/">tool</a></li>
     </ul>
   </footer>
 </article>

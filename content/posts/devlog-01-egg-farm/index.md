@@ -2,6 +2,7 @@
 title: "#1 Egg Farm Update"
 date: 2022-05-10T21:38:10+07:00
 draft: false
+tags: ["blog"]
 ---
 
 Welcome to the first update for Egg Farm, the game title may change in the future.

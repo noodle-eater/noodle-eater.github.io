@@ -2,6 +2,7 @@
 title: "User Experience for Tools Development"
 date: 2020-06-09
 draft: false
+tags: ["tool"]
 ---
 
 Recently I learn a book about “[Designing the User Experience of Game Development Tools](https://www.crcpress.com/Designing-the-User-Experience-of-Game-Development-Tools/Lightbown/p/book/9781482240191)”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.

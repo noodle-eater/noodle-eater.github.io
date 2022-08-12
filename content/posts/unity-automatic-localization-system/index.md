@@ -2,6 +2,7 @@
 title: "Unity Automatic Localization System"
 date: 2022-05-02T00:01:43+07:00
 draft: false
+tags: ["tool"]
 ---
 
 Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.

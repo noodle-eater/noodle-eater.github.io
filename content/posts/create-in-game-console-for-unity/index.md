@@ -2,6 +2,7 @@
 title: "Create in Game Console for Unity"
 date: 2020-01-23
 draft: false
+tags: ["tool"]
 ---
 
 # Intro
