@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jun 2022 21:57:37 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Aug 2022 22:45:41 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enum Generator in Unity</title>
+      <link>https://noodle-eater.github.io/posts/enum-generator-in-unity/</link>
+      <pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate>
+      
+      <guid>https://noodle-eater.github.io/posts/enum-generator-in-unity/</guid>
+      <description>Do you ever think to use enum for making ID because it can be access from code?
+for long list of item id this is not good I guess, but for short id this should be fine.
+ScriptableObject ScriptableObject is used for the user interface of this generator because the user most likely wanna have more than one enum generator they can edit. In this ScriptableObject, we need to define directory, namespace, enum name and values.</description>
+    </item>
+    
     <item>
       <title>#2 Egg Farm Update</title>
       <link>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</link>
