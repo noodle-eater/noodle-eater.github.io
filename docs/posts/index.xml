@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Noodle Eater</title>
-    <link>https://amdhamdani.github.io/posts/</link>
+    <link>https://noodle-eater.github.io/posts/</link>
     <description>Recent content in Posts on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jun 2022 21:57:37 +0700</lastBuildDate><atom:link href="https://amdhamdani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2022 21:57:37 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>#2 Egg Farm Update</title>
-      <link>https://amdhamdani.github.io/posts/devlog-02-egg-farm/</link>
+      <link>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</link>
       <pubDate>Fri, 10 Jun 2022 21:57:37 +0700</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/devlog-02-egg-farm/</guid>
+      <guid>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</guid>
       <description>Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping me keep working on my games, I am glad start writing this blog actually. And these are the update of the game.
 Sheep Instead of putting the sheep inside a cage, I decide to let them roam in the field and search for food.</description>
     </item>
     
     <item>
       <title>GameObject Name Redirector in Unity</title>
-      <link>https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/</link>
+      <link>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</link>
       <pubDate>Wed, 11 May 2022 22:21:21 +0700</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/tool-unity-gameobject-redirector/</guid>
+      <guid>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</guid>
       <description>Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
 In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
 Structure Data   GameObjects
@@ -31,10 +31,10 @@ This data comes from Unity Engine itself, to retrieve this I use</description>
     
     <item>
       <title>#1 Egg Farm Update</title>
-      <link>https://amdhamdani.github.io/posts/devlog-01-egg-farm/</link>
+      <link>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</link>
       <pubDate>Tue, 10 May 2022 21:38:10 +0700</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/devlog-01-egg-farm/</guid>
+      <guid>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</guid>
       <description>Welcome to the first update for Egg Farm, the game title may change in the future.
 Egg Farm is a relaxing mini farming game, where you can just sit and interact with everything inside the game, plant crops, and ranch animals, and design your own farm.
 Since this is a mini-game there will not be many features existing, although I still add more features that seem fun.
@@ -43,29 +43,29 @@ There is still more work that needs to be done to finish this game.</description
     
     <item>
       <title>Unreal Engine Overflow</title>
-      <link>https://amdhamdani.github.io/posts/ue-overflow/</link>
+      <link>https://noodle-eater.github.io/posts/ue-overflow/</link>
       <pubDate>Fri, 06 May 2022 21:42:25 +0700</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/ue-overflow/</guid>
+      <guid>https://noodle-eater.github.io/posts/ue-overflow/</guid>
       <description>Recently, I start using Unreal Engine to develop games. I did not have proper C++ or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.
  Print Enum Into FString StaticEnum&amp;lt;ENUM_TYPE&amp;gt;()-&amp;gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &amp;#34;Item Name: {ItemName}&amp;#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&amp;#34;ItemName&amp;#34;), itemName); Loop UDataTable itemDT-&amp;gt;ForeachRow&amp;lt;FItemInfo&amp;gt;(&amp;#34;FindItem&amp;#34;, [&amp;amp;](const FName&amp;amp; key, const FItemInfo&amp;amp; item) {  // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&amp;gt;FindRow&amp;lt;FItemInfo&amp;gt;(ROW_NAME, &amp;#34;FindItem&amp;#34;); Create UObject Instance UTextBlock* text = NewObject&amp;lt;UTextBlock&amp;gt;(btn, FName(&amp;#34;text&amp;#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&amp;#34;YOUR_CONDITION&amp;#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &amp;#34;1&amp;#34;, ClampMax = &amp;#34;10&amp;#34;)) int32 totalSpawned; Instantiate a UObject/Blueprint/WBP MyClass* instance = NewObject&amp;lt;MyClass&amp;gt;();  UPROPERTY(EditDefaultsOnly, BlueprintReadWrite) TSubclassOf&amp;lt;MyClass&amp;gt; MyClassType;  // UObject Subclass NewObject&amp;lt;ActorClass&amp;gt;(MyClassType);  // Actor Subclass GetWorld()-&amp;gt;SpawnActor&amp;lt;ActorClass&amp;gt;(MyClassType);  // Widget Subclass MyWidget* widget = CreateWidget&amp;lt;MyWidget&amp;gt;(this, MyWidgetType);  The code above is not tested and is used for reference only.</description>
     </item>
     
     <item>
       <title>Unity Automatic Localization System</title>
-      <link>https://amdhamdani.github.io/posts/unity-automatic-localization-system/</link>
+      <link>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</link>
       <pubDate>Mon, 02 May 2022 00:01:43 +0700</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/unity-automatic-localization-system/</guid>
+      <guid>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</guid>
       <description>Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.</description>
     </item>
     
     <item>
       <title>Smart Framework</title>
-      <link>https://amdhamdani.github.io/posts/smart-framework/</link>
+      <link>https://noodle-eater.github.io/posts/smart-framework/</link>
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/smart-framework/</guid>
+      <guid>https://noodle-eater.github.io/posts/smart-framework/</guid>
       <description>I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
 I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.
 Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it.</description>
@@ -73,10 +73,10 @@ Last year, my senior told me about Smart Framework, I read about it but I failed
     
     <item>
       <title>User Experience for Tools Development</title>
-      <link>https://amdhamdani.github.io/posts/ux-for-tools-programmer/</link>
+      <link>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/ux-for-tools-programmer/</guid>
+      <guid>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</guid>
       <description>Recently I learn a book about “Designing the User Experience of Game Development Tools”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.
 What is User Experience?
 There are many definitions of user experience. The popular one is from Elizabeth Sanders,
@@ -86,10 +86,10 @@ There are many definitions of user experience. The popular one is from Elizabeth
     
     <item>
       <title>Create in Game Console for Unity</title>
-      <link>https://amdhamdani.github.io/posts/create-in-game-console-for-unity/</link>
+      <link>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://amdhamdani.github.io/posts/create-in-game-console-for-unity/</guid>
+      <guid>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</guid>
       <description>Intro When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc.
 In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device.</description>
     </item>

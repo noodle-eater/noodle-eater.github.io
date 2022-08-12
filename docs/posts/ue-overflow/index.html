@@ -10,15 +10,15 @@
 <meta name="description" content="Recently, I start using Unreal Engine to develop games. I did not have proper C&#43;&#43; or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.
  Print Enum Into FString StaticEnum&lt;ENUM_TYPE&gt;()-&gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &#34;Item Name: {ItemName}&#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&#34;ItemName&#34;), itemName); Loop UDataTable itemDT-&gt;ForeachRow&lt;FItemInfo&gt;(&#34;FindItem&#34;, [&amp;](const FName&amp; key, const FItemInfo&amp; item) {  // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&gt;FindRow&lt;FItemInfo&gt;(ROW_NAME, &#34;FindItem&#34;); Create UObject Instance UTextBlock* text = NewObject&lt;UTextBlock&gt;(btn, FName(&#34;text&#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&#34;YOUR_CONDITION&#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &#34;1&#34;, ClampMax = &#34;10&#34;)) int32 totalSpawned; Instantiate a UObject/Blueprint/WBP MyClass* instance = NewObject&lt;MyClass&gt;();  UPROPERTY(EditDefaultsOnly, BlueprintReadWrite) TSubclassOf&lt;MyClass&gt; MyClassType;  // UObject Subclass NewObject&lt;ActorClass&gt;(MyClassType);  // Actor Subclass GetWorld()-&gt;SpawnActor&lt;ActorClass&gt;(MyClassType);  // Widget Subclass MyWidget* widget = CreateWidget&lt;MyWidget&gt;(this, MyWidgetType);  The code above is not tested and is used for reference only.">
 <meta name="author" content="">
-<link rel="canonical" href="https://amdhamdani.github.io/posts/ue-overflow/">
+<link rel="canonical" href="https://noodle-eater.github.io/posts/ue-overflow/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.ec8da366ca2fb647537ccb7a8f6fa5b4e9cd3c7a0d3171dd2d3baad1e49c8bfc.css" integrity="sha256-7I2jZsovtkdTfMt6j2&#43;ltOnNPHoNMXHdLTuq0eSci/w=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js" integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://amdhamdani.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://amdhamdani.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://amdhamdani.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://amdhamdani.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://amdhamdani.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://noodle-eater.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://noodle-eater.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://noodle-eater.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://noodle-eater.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://noodle-eater.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -61,7 +61,7 @@
 <meta property="og:description" content="Recently, I start using Unreal Engine to develop games. I did not have proper C&#43;&#43; or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.
  Print Enum Into FString StaticEnum&lt;ENUM_TYPE&gt;()-&gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &#34;Item Name: {ItemName}&#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&#34;ItemName&#34;), itemName); Loop UDataTable itemDT-&gt;ForeachRow&lt;FItemInfo&gt;(&#34;FindItem&#34;, [&amp;](const FName&amp; key, const FItemInfo&amp; item) {  // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&gt;FindRow&lt;FItemInfo&gt;(ROW_NAME, &#34;FindItem&#34;); Create UObject Instance UTextBlock* text = NewObject&lt;UTextBlock&gt;(btn, FName(&#34;text&#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&#34;YOUR_CONDITION&#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &#34;1&#34;, ClampMax = &#34;10&#34;)) int32 totalSpawned; Instantiate a UObject/Blueprint/WBP MyClass* instance = NewObject&lt;MyClass&gt;();  UPROPERTY(EditDefaultsOnly, BlueprintReadWrite) TSubclassOf&lt;MyClass&gt; MyClassType;  // UObject Subclass NewObject&lt;ActorClass&gt;(MyClassType);  // Actor Subclass GetWorld()-&gt;SpawnActor&lt;ActorClass&gt;(MyClassType);  // Widget Subclass MyWidget* widget = CreateWidget&lt;MyWidget&gt;(this, MyWidgetType);  The code above is not tested and is used for reference only." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://amdhamdani.github.io/posts/ue-overflow/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://noodle-eater.github.io/posts/ue-overflow/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-06T21:42:25&#43;07:00" />
 <meta property="article:modified_time" content="2022-05-06T21:42:25&#43;07:00" />
 
@@ -80,13 +80,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://amdhamdani.github.io/posts/"
+      "item": "https://noodle-eater.github.io/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Unreal Engine Overflow",
-      "item": "https://amdhamdani.github.io/posts/ue-overflow/"
+      "item": "https://noodle-eater.github.io/posts/ue-overflow/"
     }
   ]
 }
@@ -108,14 +108,14 @@
   "dateModified": "2022-05-06T21:42:25+07:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://amdhamdani.github.io/posts/ue-overflow/"
+    "@id": "https://noodle-eater.github.io/posts/ue-overflow/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Noodle Eater",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://amdhamdani.github.io/favicon.ico"
+      "url": "https://noodle-eater.github.io/favicon.ico"
     }
   }
 }
@@ -137,7 +137,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://amdhamdani.github.io/" accesskey="h" title="Noodle Eater (Alt + H)">Noodle Eater</a>
+            <a href="https://noodle-eater.github.io/" accesskey="h" title="Noodle Eater (Alt + H)">Noodle Eater</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -228,7 +228,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://amdhamdani.github.io/">Noodle Eater</a></span>
+    <span>&copy; 2022 <a href="https://noodle-eater.github.io/">Noodle Eater</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
