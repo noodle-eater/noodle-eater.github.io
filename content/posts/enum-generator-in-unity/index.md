@@ -2,6 +2,7 @@
 title: "Enum Generator in Unity"
 date: 2022-08-12T22:45:41+07:00
 draft: false
+tags: ["tool"]
 ---
 
 Do you ever think to use enum for making ID because it can be access from code?
@@ -72,7 +73,7 @@ using (StreamWriter sourceWriter = new StreamWriter(filePath))
 
 ## Trigger
 
-ContextMenu is used to trigger the user to generate the enum. Not pretty convenient, but at least we can use it now.
+For the trigger to generate the enum, we use `ContextMenu`, not pretty convenient compared to a button, but at least we can use it. Later we can update it to use a button or even a custom editor window, but I stick to ScriptableObject because this is the faster way to get the generator working.
 
 ```csharp
 [ContextMenu("Generate")]

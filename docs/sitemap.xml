@@ -11,6 +11,12 @@
     <loc>https://noodle-eater.github.io/posts/</loc>
     <lastmod>2022-08-12T22:45:41+07:00</lastmod>
   </url><url>
+    <loc>https://noodle-eater.github.io/tags/</loc>
+    <lastmod>2022-08-12T22:45:41+07:00</lastmod>
+  </url><url>
+    <loc>https://noodle-eater.github.io/tags/tool/</loc>
+    <lastmod>2022-08-12T22:45:41+07:00</lastmod>
+  </url><url>
     <loc>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</loc>
     <lastmod>2022-06-10T21:57:37+07:00</lastmod>
   </url><url>
@@ -36,7 +42,5 @@
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://noodle-eater.github.io/categories/</loc>
-  </url><url>
-    <loc>https://noodle-eater.github.io/tags/</loc>
   </url>
 </urlset>
