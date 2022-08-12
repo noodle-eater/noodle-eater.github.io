@@ -1,7 +1,7 @@
 ---
 title: "Enum Generator in Unity"
 date: 2022-08-12T22:45:41+07:00
-draft: true
+draft: false
 ---
 
 Do you ever think to use enum for making ID because it can be access from code?
