@@ -5,9 +5,9 @@ draft: false
 tags: ["tool"]
 ---
 
-Do you ever think to use enum for making ID because it can be access from code?
+Do you ever think to use enum for making ID because it can be access the from code?
 
-for long list of item id this is not good I guess, but for short id this should be fine.
+For long list of item id this is not really a good solution, but for short id this should be fine.
 
 ## ScriptableObject
 
@@ -26,7 +26,7 @@ Using CodeDom the generated code will be automatically indented and there should
 
 This code generator is also can be used for unit testing, but it’s on another level.
 
-For this simple generator, we just need to create, 
+For this simple generator, we just need to create,
 
 - CodeNamespace, represent a namespace declaration.
 - CodeTypeDeclaration, this is where we can declare enum, class, interface and struct.

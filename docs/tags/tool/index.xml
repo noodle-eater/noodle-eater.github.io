@@ -13,8 +13,8 @@
       <pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate>
       
       <guid>https://noodle-eater.github.io/posts/enum-generator-in-unity/</guid>
-      <description>Do you ever think to use enum for making ID because it can be access from code?
-for long list of item id this is not good I guess, but for short id this should be fine.
+      <description>Do you ever think to use enum for making ID because it can be access the from code?
+For long list of item id this is not really a good solution, but for short id this should be fine.
 ScriptableObject ScriptableObject is used for the user interface of this generator because the user most likely wanna have more than one enum generator they can edit. In this ScriptableObject, we need to define directory, namespace, enum name and values.</description>
     </item>
     
