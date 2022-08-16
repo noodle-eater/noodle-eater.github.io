@@ -9,7 +9,7 @@ tags: ["tools"]
 
 I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have `UPROPERTY(meta=(BindWidget))` to binding UI variable declaration in the C++ code and the Widget.
 
-```csharp
+```cpp
 UPROPERTY(meta=(BindWidget))
 UTextBlock* TextBlock_PlayerName;
 ```

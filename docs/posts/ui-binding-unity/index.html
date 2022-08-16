@@ -195,8 +195,8 @@ UPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind 
   </header> 
   <div class="post-content"><h2 id="intro">Intro<a hidden class="anchor" aria-hidden="true" href="#intro">#</a></h2>
 <p>I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have <code>UPROPERTY(meta=(BindWidget))</code> to binding UI variable declaration in the C++ code and the Widget.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>UPROPERTY(meta=(BindWidget))
-</span></span><span style="display:flex;"><span>UTextBlock* TextBlock_PlayerName;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>UPROPERTY(meta<span style="color:#f92672">=</span>(BindWidget))
+</span></span><span style="display:flex;"><span>UTextBlock<span style="color:#f92672">*</span> TextBlock_PlayerName;
 </span></span></code></pre></div><p>Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.</p>
 <h2 id="requirement">Requirement<a hidden class="anchor" aria-hidden="true" href="#requirement">#</a></h2>
 <p>This UI binding must fulfil these criteria,</p>
