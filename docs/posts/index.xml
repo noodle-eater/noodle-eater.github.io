@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Noodle Eater</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Aug 2022 22:45:41 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Aug 2022 17:00:32 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity UI Binding Tools</title>
+      <link>https://noodle-eater.github.io/posts/ui-binding-unity/</link>
+      <pubDate>Mon, 15 Aug 2022 17:00:32 +0700</pubDate>
+      
+      <guid>https://noodle-eater.github.io/posts/ui-binding-unity/</guid>
+      <description>Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.
+UPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding.</description>
+    </item>
+    
     <item>
       <title>Enum Generator in Unity</title>
       <link>https://noodle-eater.github.io/posts/enum-generator-in-unity/</link>
