@@ -4,44 +4,37 @@
     <title>Tags on Noodle Eater</title>
     <link>https://noodle-eater.github.io/tags/</link>
     <description>Recent content in Tags on Noodle Eater</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 15 Aug 2022 17:00:32 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Aug 2022 17:00:32 +0700</lastBuildDate>
+    <atom:link href="https://noodle-eater.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tools</title>
+      <title>Tools</title>
       <link>https://noodle-eater.github.io/tags/tools/</link>
-      <pubDate>Mon, 15 Aug 2022 17:00:32 +0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://noodle-eater.github.io/tags/tools/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tool</title>
+      <title>Tool</title>
       <link>https://noodle-eater.github.io/tags/tool/</link>
-      <pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://noodle-eater.github.io/tags/tool/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>https://noodle-eater.github.io/tags/blog/</link>
-      <pubDate>Fri, 10 Jun 2022 21:57:37 +0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://noodle-eater.github.io/tags/blog/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>productivity</title>
+      <title>Productivity</title>
       <link>https://noodle-eater.github.io/tags/productivity/</link>
-      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://noodle-eater.github.io/tags/productivity/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

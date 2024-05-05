@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>blog | Noodle Eater</title>
+<title>Blog | Noodle Eater</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://noodle-eater.github.io/tags/blog/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3299c596a7007118365635c056dd427dace22b7b8c1341fdef6fa6c31359ba10.css" integrity="" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://noodle-eater.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://noodle-eater.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://noodle-eater.github.io/favicon-32x32.png">
@@ -19,6 +19,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://noodle-eater.github.io/tags/blog/index.xml">
+<link rel="alternate" hreflang="en" href="https://noodle-eater.github.io/tags/blog/">
 <noscript>
     <style>
         #theme-toggle,
@@ -36,7 +37,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -55,13 +56,13 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="blog" />
+</noscript><meta property="og:title" content="Blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://noodle-eater.github.io/tags/blog/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="blog"/>
+<meta name="twitter:title" content="Blog"/>
 <meta name="twitter:description" content=""/>
 
 </head>
@@ -128,13 +129,13 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    blog
+    Blog
   </h1>
 </header>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>#2 Egg Farm Update
+    <h2 class="entry-hint-parent">#2 Egg Farm Update
     </h2>
   </header>
   <div class="entry-content">
@@ -147,7 +148,7 @@ Sheep Instead of putting the sheep inside a cage, I decide to let them roam in t
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>#1 Egg Farm Update
+    <h2 class="entry-hint-parent">#1 Egg Farm Update
     </h2>
   </header>
   <div class="entry-content">
@@ -162,12 +163,12 @@ There is still more work that needs to be done to finish this game....</p>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Unreal Engine Overflow
+    <h2 class="entry-hint-parent">Unreal Engine Overflow
     </h2>
   </header>
   <div class="entry-content">
     <p>Recently, I start using Unreal Engine to develop games. I did not have proper C&#43;&#43; or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.
- Print Enum Into FString StaticEnum&lt;ENUM_TYPE&gt;()-&gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &#34;Item Name: {ItemName}&#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&#34;ItemName&#34;), itemName); Loop UDataTable itemDT-&gt;ForeachRow&lt;FItemInfo&gt;(&#34;FindItem&#34;, [&amp;](const FName&amp; key, const FItemInfo&amp; item) {  // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&gt;FindRow&lt;FItemInfo&gt;(ROW_NAME, &#34;FindItem&#34;); Create UObject Instance UTextBlock* text = NewObject&lt;UTextBlock&gt;(btn, FName(&#34;text&#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&#34;YOUR_CONDITION&#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &#34;1&#34;, ClampMax = &#34;10&#34;)) int32 totalSpawned; Instantiate a UObject/Blueprint/WBP MyClass* instance = NewObject&lt;MyClass&gt;();  UPROPERTY(EditDefaultsOnly, BlueprintReadWrite) TSubclassOf&lt;MyClass&gt; MyClassType;  // UObject Subclass NewObject&lt;ActorClass&gt;(MyClassType);  // Actor Subclass GetWorld()-&gt;SpawnActor&lt;ActorClass&gt;(MyClassType);  // Widget Subclass MyWidget* widget = CreateWidget&lt;MyWidget&gt;(this, MyWidgetType);  The code above is not tested and is used for reference only....</p>
+Print Enum Into FString StaticEnum&lt;ENUM_TYPE&gt;()-&gt;GetValueAsString(ENUM_VALUE) Format FText FText format = &#34;Item Name: {ItemName}&#34; const FText formattedText = FText::FormatNamed(FTextFormat(format), TEXT(&#34;ItemName&#34;), itemName); Loop UDataTable itemDT-&gt;ForeachRow&lt;FItemInfo&gt;(&#34;FindItem&#34;, [&amp;](const FName&amp; key, const FItemInfo&amp; item) { // Do something here }); Find a Row in UDataTable FItemInfo* itemInfo = itemDT-&gt;FindRow&lt;FItemInfo&gt;(ROW_NAME, &#34;FindItem&#34;); Create UObject Instance UTextBlock* text = NewObject&lt;UTextBlock&gt;(btn, FName(&#34;text&#34;)); Hide Field on Certain Condition UPROPERTY(EditAnywhere, meta=(Condition=&#34;YOUR_CONDITION&#34;, EditConditionHides)) float speed; Create Min Max Slider for Field UPROPERTY(EditAnywhere, meta = (ClampMin = &#34;1&#34;, ClampMax = &#34;10&#34;)) int32 totalSpawned; Instantiate a UObject/Blueprint/WBP MyClass* instance = NewObject&lt;MyClass&gt;(); UPROPERTY(EditDefaultsOnly, BlueprintReadWrite) TSubclassOf&lt;MyClass&gt; MyClassType; // UObject Subclass NewObject&lt;ActorClass&gt;(MyClassType); // Actor Subclass GetWorld()-&gt;SpawnActor&lt;ActorClass&gt;(MyClassType); // Widget Subclass MyWidget* widget = CreateWidget&lt;MyWidget&gt;(this, MyWidgetType); The code above is not tested and is used for reference only....</p>
   </div>
   <footer class="entry-footer"><span title='2022-05-06 21:42:25 +0700 +07'>May 6, 2022</span></footer>
   <a class="entry-link" aria-label="post link to Unreal Engine Overflow" href="https://noodle-eater.github.io/posts/ue-overflow/"></a>
@@ -175,7 +176,8 @@ There is still more work that needs to be done to finish this game....</p>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://noodle-eater.github.io/">Noodle Eater</a></span>
+        <span>&copy; 2024 <a href="https://noodle-eater.github.io/">Noodle Eater</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

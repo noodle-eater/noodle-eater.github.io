@@ -1,66 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tool on Noodle Eater</title>
+    <title>Tool on Noodle Eater</title>
     <link>https://noodle-eater.github.io/tags/tool/</link>
-    <description>Recent content in tool on Noodle Eater</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 12 Aug 2022 22:45:41 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Tool on Noodle Eater</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Aug 2022 22:45:41 +0700</lastBuildDate>
+    <atom:link href="https://noodle-eater.github.io/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enum Generator in Unity</title>
       <link>https://noodle-eater.github.io/posts/enum-generator-in-unity/</link>
       <pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate>
-      
       <guid>https://noodle-eater.github.io/posts/enum-generator-in-unity/</guid>
       <description>Do you ever think to use enum for making ID because it can be access the from code?
 For long list of item id this is not really a good solution, but for short id this should be fine.
 ScriptableObject ScriptableObject is used for the user interface of this generator because the user most likely wanna have more than one enum generator they can edit. In this ScriptableObject, we need to define directory, namespace, enum name and values.</description>
     </item>
-    
     <item>
       <title>GameObject Name Redirector in Unity</title>
       <link>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</link>
       <pubDate>Wed, 11 May 2022 22:21:21 +0700</pubDate>
-      
       <guid>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</guid>
       <description>Intro A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.
 In Unity, There is FormerlySerializedAsAttribute, which is used to rename a field without losing its serialized value.
-Structure Data   GameObjects
+Structure Data GameObjects
 This data comes from Unity Engine itself, to retrieve this I use</description>
     </item>
-    
     <item>
       <title>Unity Automatic Localization System</title>
       <link>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</link>
       <pubDate>Mon, 02 May 2022 00:01:43 +0700</pubDate>
-      
       <guid>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</guid>
       <description>Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.</description>
     </item>
-    
     <item>
       <title>User Experience for Tools Development</title>
       <link>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</link>
       <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</guid>
       <description>Recently I learn a book about “Designing the User Experience of Game Development Tools”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.
 What is User Experience?
 There are many definitions of user experience. The popular one is from Elizabeth Sanders,
- Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;
- A. Useful</description>
+Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;
+A. Useful
+The tool you make must fulfil user needs, or it will be useless.</description>
     </item>
-    
     <item>
       <title>Create in Game Console for Unity</title>
       <link>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</guid>
       <description>Intro When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc.
 In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device.</description>
     </item>
-    
   </channel>
 </rss>
