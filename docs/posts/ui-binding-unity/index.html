@@ -1,373 +1,50 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Unity UI Binding Tools | Noodle Eater</title>
-<meta name="keywords" content="tools">
-<meta name="description" content="Intro
-I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C&#43;&#43; code and the Widget.
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Unity UI Binding Tools | Noodle Eater</title><meta name=keywords content="tools"><meta name=description content="Intro
+I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.
 UPROPERTY(meta=(BindWidget))
 UTextBlock* TextBlock_PlayerName;
-Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.">
-<meta name="author" content="">
-<link rel="canonical" href="https://noodle-eater.github.io/posts/ui-binding-unity/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://noodle-eater.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://noodle-eater.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://noodle-eater.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://noodle-eater.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://noodle-eater.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://noodle-eater.github.io/posts/ui-binding-unity/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://noodle-eater.github.io/posts/ui-binding-unity/">
-  <meta property="og:site_name" content="Noodle Eater">
-  <meta property="og:title" content="Unity UI Binding Tools">
-  <meta property="og:description" content="Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C&#43;&#43; code and the Widget.
-UPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-08-15T17:00:32+07:00">
-    <meta property="article:modified_time" content="2022-08-15T17:00:32+07:00">
-    <meta property="article:tag" content="Tools">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unity UI Binding Tools">
-<meta name="twitter:description" content="Intro
-I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C&#43;&#43; code and the Widget.
+Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal."><meta name=author content><link rel=canonical href=https://noodle-eater.github.io/posts/ui-binding-unity/><link crossorigin=anonymous href=/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as=style><link rel=icon href=https://noodle-eater.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://noodle-eater.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://noodle-eater.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://noodle-eater.github.io/apple-touch-icon.png><link rel=mask-icon href=https://noodle-eater.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://noodle-eater.github.io/posts/ui-binding-unity/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://noodle-eater.github.io/posts/ui-binding-unity/"><meta property="og:site_name" content="Noodle Eater"><meta property="og:title" content="Unity UI Binding Tools"><meta property="og:description" content="Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.
+UPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-08-15T17:00:32+07:00"><meta property="article:modified_time" content="2022-08-15T17:00:32+07:00"><meta property="article:tag" content="Tools"><meta name=twitter:card content="summary"><meta name=twitter:title content="Unity UI Binding Tools"><meta name=twitter:description content="Intro
+I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.
 UPROPERTY(meta=(BindWidget))
 UTextBlock* TextBlock_PlayerName;
-Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://noodle-eater.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Unity UI Binding Tools",
-      "item": "https://noodle-eater.github.io/posts/ui-binding-unity/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Unity UI Binding Tools",
-  "name": "Unity UI Binding Tools",
-  "description": "Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.\nUPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.\n",
-  "keywords": [
-    "tools"
-  ],
-  "articleBody": "Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.\nUPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.\nRequirement This UI binding must fulfil these criteria,\nBind UI declaration in code with the UI component in the scene. Warn the User when the binding lost its reference. Implementation How to bind? C# attribute is used for binding the variable, this attribute act as a mark and later the variable with this attribute or mark can be retrieved using reflection.\nHow to assign the references? The UI class need to inherit from CanvasUI class, a base class of each UI in this framework. We need to retrieve this class instance to assign the reference to the variable of this class. Using attributes for marking this class is possible, but I want to add basic functionality to the UI, so I need to use class.\npublic class TestPanelUI : CanvasUI { [BindUI] private Button ChangeTextOne; [BindUI] private Button ChangeTextTwo; [BindUI] private TMP_Text ChangeTextTarget; } How to warn broken reference? We want to warn the user that the reference may be broken when especially after they modify the scene, and after compiling. They may accidentally rename the GameObject or change the variable name.\nWe will listen EditorApplication.hierarchyChanged for scene modification and execute the code to validate the binding reference.\nAnd we also use DidReloadScripts attribute, this will be triggered after unity recompiles its assemblies.\n[InitializeOnLoad] public static class UIBindingValidator { static UIBindingValidator() { EditorApplication.hierarchyChanged += ValidateUIBinding; } [DidReloadScripts] public static void ValidateUIBinding() { // Validation code here } } Why use reflection? Normally we bind the reference in the unity editor by drag-dropping the game object into the field. This may be fine in a small scope project but in a bigger project, this may take a longer time. So, we want to do it automatically for a different types of components. We need a reflection to help us find which variable and game object we want and bind them.\nIs it possible not to use reflection? I believe it’s possible but with many limitations. It will require a lot more setup, such as\nDeclare using base class. Cast the reference. Difficult to check using field name. Need to wrap the variable if needed. That’s the limitation I can think of. Reflection also does the same with the check but since we can use and check the type of field in runtime, we can find the right type and the right name for the reference.\nSetup Follow the setup below to use the UI Binding in your games,\nAdd the GameCanvasSystem into a GameObject.\nCreate the UI class, and inherit it from CanvasUI.\npublic class TestPanelUI : CanvasUI { } Add the field you need, and make sure its name is the same as the one in the scene.\nAdd BindUI attribute into the field.\npublic class TestPanelUI : CanvasUI { [BindUI] private Button ChangeTextOne; [BindUI] private Button ChangeTextTwo; [BindUI] private TMP_Text ChangeTextTarget; } Press play. You can find the project here.\nThank you for reading 😃 I hope you enjoy it.\nHave a nice day.\n",
-  "wordCount" : "595",
-  "inLanguage": "en",
-  "datePublished": "2022-08-15T17:00:32+07:00",
-  "dateModified": "2022-08-15T17:00:32+07:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://noodle-eater.github.io/posts/ui-binding-unity/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Noodle Eater",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://noodle-eater.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://noodle-eater.github.io/" accesskey="h" title="Noodle Eater (Alt + H)">Noodle Eater</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://noodle-eater.github.io/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/noodle-eater" title="Github">
-                    <span>Github</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Unity UI Binding Tools
-    </h1>
-    <div class="post-meta"><span title='2022-08-15 17:00:32 +0700 +07'>August 15, 2022</span>
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="intro">Intro<a hidden class="anchor" aria-hidden="true" href="#intro">#</a></h2>
-<p>I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have <code>UPROPERTY(meta=(BindWidget))</code> to binding UI variable declaration in the C++ code and the Widget.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>UPROPERTY(meta<span style="color:#f92672">=</span>(BindWidget))
-</span></span><span style="display:flex;"><span>UTextBlock<span style="color:#f92672">*</span> TextBlock_PlayerName;
-</span></span></code></pre></div><p>Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.</p>
-<h2 id="requirement">Requirement<a hidden class="anchor" aria-hidden="true" href="#requirement">#</a></h2>
-<p>This UI binding must fulfil these criteria,</p>
-<ul>
-<li>Bind UI declaration in code with the UI component in the scene.</li>
-<li>Warn the User when the binding lost its reference.</li>
-</ul>
-<h2 id="implementation">Implementation<a hidden class="anchor" aria-hidden="true" href="#implementation">#</a></h2>
-<h3 id="how-to-bind">How to bind?<a hidden class="anchor" aria-hidden="true" href="#how-to-bind">#</a></h3>
-<p>C# attribute is used for binding the variable, this attribute act as a mark and later the variable with this attribute or mark can be retrieved using reflection.</p>
-<p><img alt="scene" loading="lazy" src="/posts/ui-binding-unity/img/scene.png"></p>
-<h3 id="how-to-assign-the-references">How to assign the references?<a hidden class="anchor" aria-hidden="true" href="#how-to-assign-the-references">#</a></h3>
-<p>The UI class need to inherit from <code>CanvasUI</code> class, a base class of each UI in this framework. We need to retrieve this class instance to assign the reference to the variable of this class. Using attributes for marking this class is possible, but I want to add basic functionality to the UI, so I need to use class.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestPanelUI</span> : CanvasUI
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> Button ChangeTextOne;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> Button ChangeTextTwo;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> TMP_Text ChangeTextTarget;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="how-to-warn-broken-reference">How to warn broken reference?<a hidden class="anchor" aria-hidden="true" href="#how-to-warn-broken-reference">#</a></h3>
-<p>We want to warn the user that the reference may be broken when especially after they modify the scene, and after compiling. They may accidentally rename the GameObject or change the variable name.</p>
-<p>We will listen <code>EditorApplication.hierarchyChanged</code> for scene modification and execute the code to validate the binding reference.</p>
-<p>And we also use <code>DidReloadScripts</code> attribute, this will be triggered after unity recompiles its assemblies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">[InitializeOnLoad]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UIBindingValidator</span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> UIBindingValidator()
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        EditorApplication.hierarchyChanged += ValidateUIBinding;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [DidReloadScripts]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> ValidateUIBinding()
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Validation code here</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="why-use-reflection">Why use reflection?<a hidden class="anchor" aria-hidden="true" href="#why-use-reflection">#</a></h3>
-<p>Normally we bind the reference in the unity editor by drag-dropping the game object into the field. This may be fine in a small scope project but in a bigger project, this may take a longer time. So, we want to do it automatically for a different types of components. We need a reflection to help us find which variable and game object we want and bind them.</p>
-<h3 id="is-it-possible-not-to-use-reflection">Is it possible not to use reflection?<a hidden class="anchor" aria-hidden="true" href="#is-it-possible-not-to-use-reflection">#</a></h3>
-<p>I believe it’s possible but with many limitations. It will require a lot more setup, such as</p>
-<ul>
-<li>Declare using base class.</li>
-<li>Cast the reference.</li>
-<li>Difficult to check using field name.</li>
-<li>Need to wrap the variable if needed.</li>
-</ul>
-<p>That’s the limitation I can think of. Reflection also does the same with the check but since we can use and check the type of field in runtime, we can find the right type and the right name for the reference.</p>
-<h2 id="setup">Setup<a hidden class="anchor" aria-hidden="true" href="#setup">#</a></h2>
-<p>Follow the setup below to use the UI Binding in your games,</p>
-<ul>
-<li>
-<p>Add the <code>GameCanvasSystem</code> into a GameObject.</p>
-</li>
-<li>
-<p>Create the UI class, and inherit it from <code>CanvasUI</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestPanelUI</span> : CanvasUI
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-<li>
-<p>Add the field you need, and make sure its name is the same as the one in the scene.</p>
-</li>
-<li>
-<p>Add <code>BindUI</code> attribute into the field.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestPanelUI</span> : CanvasUI
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> Button ChangeTextOne;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> Button ChangeTextTwo;
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [BindUI]</span> <span style="color:#66d9ef">private</span> TMP_Text ChangeTextTarget;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-<li>
-<p>Press play.
-<img alt="binding" loading="lazy" src="/posts/ui-binding-unity/img/binding.gif"></p>
-</li>
-</ul>
-<p>You can find the project <a href="https://github.com/noodle-eater/Toolset/tree/master/Assets/Canvas">here</a>.</p>
-<hr>
-<p>Thank you for reading 😃 I hope you enjoy it.</p>
-<p>Have a nice day.</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://noodle-eater.github.io/tags/tools/">Tools</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://noodle-eater.github.io/">Noodle Eater</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://noodle-eater.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Unity UI Binding Tools","item":"https://noodle-eater.github.io/posts/ui-binding-unity/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity UI Binding Tools","name":"Unity UI Binding Tools","description":"Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.\nUPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.\n","keywords":["tools"],"articleBody":"Intro I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.\nUPROPERTY(meta=(BindWidget)) UTextBlock* TextBlock_PlayerName; Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.\nRequirement This UI binding must fulfil these criteria,\nBind UI declaration in code with the UI component in the scene. Warn the User when the binding lost its reference. Implementation How to bind? C# attribute is used for binding the variable, this attribute act as a mark and later the variable with this attribute or mark can be retrieved using reflection.\nHow to assign the references? The UI class need to inherit from CanvasUI class, a base class of each UI in this framework. We need to retrieve this class instance to assign the reference to the variable of this class. Using attributes for marking this class is possible, but I want to add basic functionality to the UI, so I need to use class.\npublic class TestPanelUI : CanvasUI { [BindUI] private Button ChangeTextOne; [BindUI] private Button ChangeTextTwo; [BindUI] private TMP_Text ChangeTextTarget; } How to warn broken reference? We want to warn the user that the reference may be broken when especially after they modify the scene, and after compiling. They may accidentally rename the GameObject or change the variable name.\nWe will listen EditorApplication.hierarchyChanged for scene modification and execute the code to validate the binding reference.\nAnd we also use DidReloadScripts attribute, this will be triggered after unity recompiles its assemblies.\n[InitializeOnLoad] public static class UIBindingValidator { static UIBindingValidator() { EditorApplication.hierarchyChanged += ValidateUIBinding; } [DidReloadScripts] public static void ValidateUIBinding() { // Validation code here } } Why use reflection? Normally we bind the reference in the unity editor by drag-dropping the game object into the field. This may be fine in a small scope project but in a bigger project, this may take a longer time. So, we want to do it automatically for a different types of components. We need a reflection to help us find which variable and game object we want and bind them.\nIs it possible not to use reflection? I believe it’s possible but with many limitations. It will require a lot more setup, such as\nDeclare using base class. Cast the reference. Difficult to check using field name. Need to wrap the variable if needed. That’s the limitation I can think of. Reflection also does the same with the check but since we can use and check the type of field in runtime, we can find the right type and the right name for the reference.\nSetup Follow the setup below to use the UI Binding in your games,\nAdd the GameCanvasSystem into a GameObject.\nCreate the UI class, and inherit it from CanvasUI.\npublic class TestPanelUI : CanvasUI { } Add the field you need, and make sure its name is the same as the one in the scene.\nAdd BindUI attribute into the field.\npublic class TestPanelUI : CanvasUI { [BindUI] private Button ChangeTextOne; [BindUI] private Button ChangeTextTwo; [BindUI] private TMP_Text ChangeTextTarget; } Press play. You can find the project here.\nThank you for reading 😃 I hope you enjoy it.\nHave a nice day.\n","wordCount":"595","inLanguage":"en","datePublished":"2022-08-15T17:00:32+07:00","dateModified":"2022-08-15T17:00:32+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://noodle-eater.github.io/posts/ui-binding-unity/"},"publisher":{"@type":"Organization","name":"Noodle Eater","logo":{"@type":"ImageObject","url":"https://noodle-eater.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://noodle-eater.github.io/ accesskey=h title="Noodle Eater (Alt + H)">Noodle Eater</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://noodle-eater.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://github.com/noodle-eater title=Github><span>Github</span>&nbsp;
+<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Unity UI Binding Tools</h1><div class=post-meta><span title='2022-08-15 17:00:32 +0700 +07'>August 15, 2022</span></div></header><div class=post-content><h2 id=intro>Intro<a hidden class=anchor aria-hidden=true href=#intro>#</a></h2><p>I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have <code>UPROPERTY(meta=(BindWidget))</code> to binding UI variable declaration in the C++ code and the Widget.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span>UPROPERTY(meta<span style=color:#f92672>=</span>(BindWidget))
+</span></span><span style=display:flex><span>UTextBlock<span style=color:#f92672>*</span> TextBlock_PlayerName;
+</span></span></code></pre></div><p>Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.</p><h2 id=requirement>Requirement<a hidden class=anchor aria-hidden=true href=#requirement>#</a></h2><p>This UI binding must fulfil these criteria,</p><ul><li>Bind UI declaration in code with the UI component in the scene.</li><li>Warn the User when the binding lost its reference.</li></ul><h2 id=implementation>Implementation<a hidden class=anchor aria-hidden=true href=#implementation>#</a></h2><h3 id=how-to-bind>How to bind?<a hidden class=anchor aria-hidden=true href=#how-to-bind>#</a></h3><p>C# attribute is used for binding the variable, this attribute act as a mark and later the variable with this attribute or mark can be retrieved using reflection.</p><p><img alt=scene loading=lazy src=/posts/ui-binding-unity/img/scene.png></p><h3 id=how-to-assign-the-references>How to assign the references?<a hidden class=anchor aria-hidden=true href=#how-to-assign-the-references>#</a></h3><p>The UI class need to inherit from <code>CanvasUI</code> class, a base class of each UI in this framework. We need to retrieve this class instance to assign the reference to the variable of this class. Using attributes for marking this class is possible, but I want to add basic functionality to the UI, so I need to use class.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TestPanelUI</span> : CanvasUI
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> Button ChangeTextOne;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> Button ChangeTextTwo;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> TMP_Text ChangeTextTarget;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=how-to-warn-broken-reference>How to warn broken reference?<a hidden class=anchor aria-hidden=true href=#how-to-warn-broken-reference>#</a></h3><p>We want to warn the user that the reference may be broken when especially after they modify the scene, and after compiling. They may accidentally rename the GameObject or change the variable name.</p><p>We will listen <code>EditorApplication.hierarchyChanged</code> for scene modification and execute the code to validate the binding reference.</p><p>And we also use <code>DidReloadScripts</code> attribute, this will be triggered after unity recompiles its assemblies.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#a6e22e>[InitializeOnLoad]</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>UIBindingValidator</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> UIBindingValidator()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        EditorApplication.hierarchyChanged += ValidateUIBinding;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>    [DidReloadScripts]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> ValidateUIBinding()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Validation code here</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=why-use-reflection>Why use reflection?<a hidden class=anchor aria-hidden=true href=#why-use-reflection>#</a></h3><p>Normally we bind the reference in the unity editor by drag-dropping the game object into the field. This may be fine in a small scope project but in a bigger project, this may take a longer time. So, we want to do it automatically for a different types of components. We need a reflection to help us find which variable and game object we want and bind them.</p><h3 id=is-it-possible-not-to-use-reflection>Is it possible not to use reflection?<a hidden class=anchor aria-hidden=true href=#is-it-possible-not-to-use-reflection>#</a></h3><p>I believe it’s possible but with many limitations. It will require a lot more setup, such as</p><ul><li>Declare using base class.</li><li>Cast the reference.</li><li>Difficult to check using field name.</li><li>Need to wrap the variable if needed.</li></ul><p>That’s the limitation I can think of. Reflection also does the same with the check but since we can use and check the type of field in runtime, we can find the right type and the right name for the reference.</p><h2 id=setup>Setup<a hidden class=anchor aria-hidden=true href=#setup>#</a></h2><p>Follow the setup below to use the UI Binding in your games,</p><ul><li><p>Add the <code>GameCanvasSystem</code> into a GameObject.</p></li><li><p>Create the UI class, and inherit it from <code>CanvasUI</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TestPanelUI</span> : CanvasUI
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></li><li><p>Add the field you need, and make sure its name is the same as the one in the scene.</p></li><li><p>Add <code>BindUI</code> attribute into the field.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TestPanelUI</span> : CanvasUI
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> Button ChangeTextOne;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> Button ChangeTextTwo;
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [BindUI]</span> <span style=color:#66d9ef>private</span> TMP_Text ChangeTextTarget;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></li><li><p>Press play.
+<img alt=binding loading=lazy src=/posts/ui-binding-unity/img/binding.gif></p></li></ul><p>You can find the project <a href=https://github.com/noodle-eater/Toolset/tree/master/Assets/Canvas>here</a>.</p><hr><p>Thank you for reading 😃 I hope you enjoy it.</p><p>Have a nice day.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://noodle-eater.github.io/tags/tools/>Tools</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://noodle-eater.github.io/>Noodle Eater</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
