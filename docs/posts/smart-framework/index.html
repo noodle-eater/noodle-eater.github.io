@@ -1,14 +1,323 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Smart Framework | Noodle Eater</title><meta name=keywords content="productivity"><meta name=description content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Smart Framework | Noodle Eater</title>
+<meta name="keywords" content="productivity">
+<meta name="description" content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
 I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.
-Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework."><meta name=author content><link rel=canonical href=https://noodle-eater.github.io/posts/smart-framework/><link crossorigin=anonymous href=/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as=style><link rel=icon href=https://noodle-eater.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://noodle-eater.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://noodle-eater.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://noodle-eater.github.io/apple-touch-icon.png><link rel=mask-icon href=https://noodle-eater.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://noodle-eater.github.io/posts/smart-framework/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://noodle-eater.github.io/posts/smart-framework/"><meta property="og:site_name" content="Noodle Eater"><meta property="og:title" content="Smart Framework"><meta property="og:description" content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
+Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.">
+<meta name="author" content="">
+<link rel="canonical" href="https://noodle-eater.github.io/posts/smart-framework/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://noodle-eater.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://noodle-eater.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://noodle-eater.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://noodle-eater.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://noodle-eater.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://noodle-eater.github.io/posts/smart-framework/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://noodle-eater.github.io/posts/smart-framework/">
+  <meta property="og:site_name" content="Noodle Eater">
+  <meta property="og:title" content="Smart Framework">
+  <meta property="og:description" content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
 I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.
-Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-04-21T00:00:00+00:00"><meta property="article:modified_time" content="2021-04-21T00:00:00+00:00"><meta property="article:tag" content="Productivity"><meta name=twitter:card content="summary"><meta name=twitter:title content="Smart Framework"><meta name=twitter:description content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
+Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-04-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-04-21T00:00:00+00:00">
+    <meta property="article:tag" content="Productivity">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Smart Framework">
+<meta name="twitter:description" content="I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.
 I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.
-Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://noodle-eater.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Smart Framework","item":"https://noodle-eater.github.io/posts/smart-framework/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Smart Framework","name":"Smart Framework","description":"I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.\nI want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.\nLast year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.\n","keywords":["productivity"],"articleBody":"I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.\nI want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.\nLast year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.\nSmart stands for Specific, Measureable, Accountable, Realistic, Time-bound.\nSpecific Define the What (Output, Outcome, Expected Result) and How to achieve it.\nWhen developed an educational game for an educational game portal, the output I expected from the game was playable and ready to be submitted into the portal to be reviewed.\nHow I can achieve this? I will work on the game programming and the game design and art I will ask my friend to work on it. And for the sounds, we will search free to use for commercial audio.\nMeasurable Define how to measure progress, the definition of done and acceptance criteria.\nThe definition of done from my game is when I have a playable game so I can submit my game.\nSince I made this game for an educational portal, the acceptance criteria will be when my game is accepted and it performs well in that portal and generate a good amount of revenue.\nAnd I separate the game into a smaller milestones, prototype, MVP, test, release to help me measure the progress.\nAccountable Define to whom you can delegate the goal.\nYou can delegate it not only to a person but to third-party services or other things too that can help you achieve your goal.\ne.g when you need analytics in your game, you can use firebase analytics. Or you need history references for your history games, you can buy a history book or ask your friends that love history.\nIn my game, I am responsible for game programming.\nGame design and art will be my friends.\nThe game audio will be free for commercial use audio.\nRealistic Make your goal align with your time and resources.\nYou should understand, how much time and resources you have.\nWhen I worked on my educational game, my resources are 2 people with a time of 3 months. I worked on programming while my friends were in art and design. Since we only have 3 months to finish the game and I only work on it in my free time, we make the game scope smaller and pick the easiest mechanics we can implement.\nThe end product is considered mini-games since there is not much gameplay there. If we want to add more content or make a bigger game we will need more time or more people to work on it.\nWhen you have a friend that working full time on his casual game and takes 3 months to finish it. You need to allocate more time when you work on a similar casual game but in your free time. A similar game scope can take different times to achieve depending on resources and time.\nTime-Bound Set the deadline for you goal.\nYou should give a deadline to your goal, to keep you stay motivated so you can understand if this goal is possible or not with your current time-bound. So you can adjust your resources, time, and the goal itself.\nIn my games, we use the deadline from the game portal which is 3 months to work on the game, make the scope small enough so you can finish it on time.\nThank you for reading this far, you are awesome.\nI hope it will helpful for you.\nHave a nice day :)\n","wordCount":"660","inLanguage":"en","datePublished":"2021-04-21T00:00:00Z","dateModified":"2021-04-21T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://noodle-eater.github.io/posts/smart-framework/"},"publisher":{"@type":"Organization","name":"Noodle Eater","logo":{"@type":"ImageObject","url":"https://noodle-eater.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://noodle-eater.github.io/ accesskey=h title="Noodle Eater (Alt + H)">Noodle Eater</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://noodle-eater.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://github.com/noodle-eater title=Github><span>Github</span>&nbsp;
-<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Smart Framework</h1><div class=post-meta><span title='2021-04-21 00:00:00 +0000 UTC'>April 21, 2021</span></div></header><div class=post-content><p>I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.</p><p>I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.</p><p>Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.</p><p>Smart stands for <strong>S</strong>pecific, <strong>M</strong>easureable, <strong>A</strong>ccountable, <strong>R</strong>ealistic, <strong>T</strong>ime-bound.</p><h3 id=specific>Specific<a hidden class=anchor aria-hidden=true href=#specific>#</a></h3><blockquote><p>Define the What (Output, Outcome, Expected Result) and How to achieve it.</p></blockquote><p>When developed an educational game for an educational game portal, the output I expected from the game was playable and ready to be submitted into the portal to be reviewed.</p><p>How I can achieve this? I will work on the game programming and the game design and art I will ask my friend to work on it. And for the sounds, we will search free to use for commercial audio.</p><h3 id=measurable>Measurable<a hidden class=anchor aria-hidden=true href=#measurable>#</a></h3><blockquote><p>Define how to measure progress, the definition of done and acceptance criteria.</p></blockquote><p>The definition of done from my game is when I have a playable game so I can submit my game.</p><p>Since I made this game for an educational portal, the acceptance criteria will be when my game is accepted and it performs well in that portal and generate a good amount of revenue.</p><p>And I separate the game into a smaller milestones, prototype, MVP, test, release to help me measure the progress.</p><h3 id=accountable>Accountable<a hidden class=anchor aria-hidden=true href=#accountable>#</a></h3><blockquote><p>Define to whom you can delegate the goal.</p></blockquote><p>You can delegate it not only to a person but to third-party services or other things too that can help you achieve your goal.</p><p>e.g when you need analytics in your game, you can use firebase analytics. Or you need history references for your history games, you can buy a history book or ask your friends that love history.</p><p>In my game, I am responsible for game programming.</p><p>Game design and art will be my friends.</p><p>The game audio will be free for commercial use audio.</p><h3 id=realistic>Realistic<a hidden class=anchor aria-hidden=true href=#realistic>#</a></h3><blockquote><p>Make your goal align with your time and resources.</p></blockquote><p>You should understand, how much time and resources you have.</p><p>When I worked on my educational game, my resources are 2 people with a time of 3 months. I worked on programming while my friends were in art and design. Since we only have 3 months to finish the game and I only work on it in my free time, we make the game scope smaller and pick the easiest mechanics we can implement.</p><p>The end product is considered mini-games since there is not much gameplay there. If we want to add more content or make a bigger game we will need more time or more people to work on it.</p><p>When you have a friend that working full time on his casual game and takes 3 months to finish it. You need to allocate more time when you work on a similar casual game but in your free time. A similar game scope can take different times to achieve depending on resources and time.</p><h3 id=time-bound>Time-Bound<a hidden class=anchor aria-hidden=true href=#time-bound>#</a></h3><blockquote><p>Set the deadline for you goal.</p></blockquote><p>You should give a deadline to your goal, to keep you stay motivated so you can understand if this goal is possible or not with your current time-bound. So you can adjust your resources, time, and the goal itself.</p><p>In my games, we use the deadline from the game portal which is 3 months to work on the game, make the scope small enough so you can finish it on time.</p><hr><p>Thank you for reading this far, you are awesome.</p><p>I hope it will helpful for you.</p><p>Have a nice day :)</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://noodle-eater.github.io/tags/productivity/>Productivity</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://noodle-eater.github.io/>Noodle Eater</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://noodle-eater.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Smart Framework",
+      "item": "https://noodle-eater.github.io/posts/smart-framework/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Smart Framework",
+  "name": "Smart Framework",
+  "description": "I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.\nI want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.\nLast year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.\n",
+  "keywords": [
+    "productivity"
+  ],
+  "articleBody": "I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.\nI want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.\nLast year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.\nSmart stands for Specific, Measureable, Accountable, Realistic, Time-bound.\nSpecific Define the What (Output, Outcome, Expected Result) and How to achieve it.\nWhen developed an educational game for an educational game portal, the output I expected from the game was playable and ready to be submitted into the portal to be reviewed.\nHow I can achieve this? I will work on the game programming and the game design and art I will ask my friend to work on it. And for the sounds, we will search free to use for commercial audio.\nMeasurable Define how to measure progress, the definition of done and acceptance criteria.\nThe definition of done from my game is when I have a playable game so I can submit my game.\nSince I made this game for an educational portal, the acceptance criteria will be when my game is accepted and it performs well in that portal and generate a good amount of revenue.\nAnd I separate the game into a smaller milestones, prototype, MVP, test, release to help me measure the progress.\nAccountable Define to whom you can delegate the goal.\nYou can delegate it not only to a person but to third-party services or other things too that can help you achieve your goal.\ne.g when you need analytics in your game, you can use firebase analytics. Or you need history references for your history games, you can buy a history book or ask your friends that love history.\nIn my game, I am responsible for game programming.\nGame design and art will be my friends.\nThe game audio will be free for commercial use audio.\nRealistic Make your goal align with your time and resources.\nYou should understand, how much time and resources you have.\nWhen I worked on my educational game, my resources are 2 people with a time of 3 months. I worked on programming while my friends were in art and design. Since we only have 3 months to finish the game and I only work on it in my free time, we make the game scope smaller and pick the easiest mechanics we can implement.\nThe end product is considered mini-games since there is not much gameplay there. If we want to add more content or make a bigger game we will need more time or more people to work on it.\nWhen you have a friend that working full time on his casual game and takes 3 months to finish it. You need to allocate more time when you work on a similar casual game but in your free time. A similar game scope can take different times to achieve depending on resources and time.\nTime-Bound Set the deadline for you goal.\nYou should give a deadline to your goal, to keep you stay motivated so you can understand if this goal is possible or not with your current time-bound. So you can adjust your resources, time, and the goal itself.\nIn my games, we use the deadline from the game portal which is 3 months to work on the game, make the scope small enough so you can finish it on time.\nThank you for reading this far, you are awesome.\nI hope it will helpful for you.\nHave a nice day :)\n",
+  "wordCount" : "660",
+  "inLanguage": "en",
+  "datePublished": "2021-04-21T00:00:00Z",
+  "dateModified": "2021-04-21T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://noodle-eater.github.io/posts/smart-framework/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noodle Eater",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noodle-eater.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://noodle-eater.github.io/" accesskey="h" title="Noodle Eater (Alt + H)">Noodle Eater</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://noodle-eater.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/noodle-eater" title="Github">
+                    <span>Github</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Smart Framework
+    </h1>
+    <div class="post-meta"><span title='2021-04-21 00:00:00 +0000 UTC'>April 21, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.</p>
+<p>I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.</p>
+<p>Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.</p>
+<p>Smart stands for <strong>S</strong>pecific, <strong>M</strong>easureable, <strong>A</strong>ccountable, <strong>R</strong>ealistic, <strong>T</strong>ime-bound.</p>
+<h3 id="specific">Specific<a hidden class="anchor" aria-hidden="true" href="#specific">#</a></h3>
+<blockquote>
+<p>Define the What (Output, Outcome, Expected Result) and How to achieve it.</p></blockquote>
+<p>When developed an educational game for an educational game portal, the output I expected from the game was playable and ready to be submitted into the portal to be reviewed.</p>
+<p>How I can achieve this? I will work on the game programming and the game design and art I will ask my friend to work on it. And for the sounds, we will search free to use for commercial audio.</p>
+<h3 id="measurable">Measurable<a hidden class="anchor" aria-hidden="true" href="#measurable">#</a></h3>
+<blockquote>
+<p>Define how to measure progress, the definition of done and acceptance criteria.</p></blockquote>
+<p>The definition of done from my game is when I have a playable game so I can submit my game.</p>
+<p>Since I made this game for an educational portal, the acceptance criteria will be when my game is accepted and it performs well in that portal and generate a good amount of revenue.</p>
+<p>And I separate the game into a smaller milestones, prototype, MVP, test, release to help me measure the progress.</p>
+<h3 id="accountable">Accountable<a hidden class="anchor" aria-hidden="true" href="#accountable">#</a></h3>
+<blockquote>
+<p>Define to whom you can delegate the goal.</p></blockquote>
+<p>You can delegate it not only to a person but to third-party services or other things too that can help you achieve your goal.</p>
+<p>e.g when you need analytics in your game, you can use firebase analytics. Or you need history references for your history games, you can buy a history book or ask your friends that love history.</p>
+<p>In my game, I am responsible for game programming.</p>
+<p>Game design and art will be my friends.</p>
+<p>The game audio will be free for commercial use audio.</p>
+<h3 id="realistic">Realistic<a hidden class="anchor" aria-hidden="true" href="#realistic">#</a></h3>
+<blockquote>
+<p>Make your goal align with your time and resources.</p></blockquote>
+<p>You should understand, how much time and resources you have.</p>
+<p>When I worked on my educational game, my resources are 2 people with a time of 3 months. I worked on programming while my friends were in art and design. Since we only have 3 months to finish the game and I only work on it in my free time, we make the game scope smaller and pick the easiest mechanics we can implement.</p>
+<p>The end product is considered mini-games since there is not much gameplay there. If we want to add more content or make a bigger game we will need more time or more people to work on it.</p>
+<p>When you have a friend that working full time on his casual game and takes 3 months to finish it. You need to allocate more time when you work on a similar casual game but in your free time. A similar game scope can take different times to achieve depending on resources and time.</p>
+<h3 id="time-bound">Time-Bound<a hidden class="anchor" aria-hidden="true" href="#time-bound">#</a></h3>
+<blockquote>
+<p>Set the deadline for you goal.</p></blockquote>
+<p>You should give a deadline to your goal, to keep you stay motivated so you can understand if this goal is possible or not with your current time-bound. So you can adjust your resources, time, and the goal itself.</p>
+<p>In my games, we use the deadline from the game portal which is 3 months to work on the game, make the scope small enough so you can finish it on time.</p>
+<hr>
+<p>Thank you for reading this far, you are awesome.</p>
+<p>I hope it will helpful for you.</p>
+<p>Have a nice day :)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://noodle-eater.github.io/tags/productivity/">Productivity</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://noodle-eater.github.io/">Noodle Eater</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

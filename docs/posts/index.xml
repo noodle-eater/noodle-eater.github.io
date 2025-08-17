@@ -1,68 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Noodle Eater</title><link>https://noodle-eater.github.io/posts/</link><description>Recent content in Posts on Noodle Eater</description><generator>Hugo -- 0.148.2</generator><language>en</language><lastBuildDate>Mon, 15 Aug 2022 17:00:32 +0700</lastBuildDate><atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity UI Binding Tools</title><link>https://noodle-eater.github.io/posts/ui-binding-unity/</link><pubDate>Mon, 15 Aug 2022 17:00:32 +0700</pubDate><guid>https://noodle-eater.github.io/posts/ui-binding-unity/</guid><description>&lt;h2 id="intro">Intro&lt;/h2>
-&lt;p>I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have &lt;code>UPROPERTY(meta=(BindWidget))&lt;/code> to binding UI variable declaration in the C++ code and the Widget.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>UPROPERTY(meta&lt;span style="color:#f92672">=&lt;/span>(BindWidget))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>UTextBlock&lt;span style="color:#f92672">*&lt;/span> TextBlock_PlayerName;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.&lt;/p></description></item><item><title>Enum Generator in Unity</title><link>https://noodle-eater.github.io/posts/enum-generator-in-unity/</link><pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate><guid>https://noodle-eater.github.io/posts/enum-generator-in-unity/</guid><description>&lt;p>Do you ever think to use enum for making ID because it can be access the from code?&lt;/p>
-&lt;p>For long list of item id this is not really a good solution, but for short id this should be fine.&lt;/p>
-&lt;h2 id="scriptableobject">ScriptableObject&lt;/h2>
-&lt;p>ScriptableObject is used for the user interface of this generator because the user most likely wanna have more than one enum generator they can edit. In this ScriptableObject, we need to define directory, namespace, enum name and values.&lt;/p></description></item><item><title>#2 Egg Farm Update</title><link>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</link><pubDate>Fri, 10 Jun 2022 21:57:37 +0700</pubDate><guid>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</guid><description>&lt;p>Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping me keep working on my games, I am glad start writing this blog actually. And these are the update of the game.&lt;/p>
-&lt;h2 id="sheep">Sheep&lt;/h2>
-&lt;p>Instead of putting the sheep inside a cage, I decide to let them roam in the field and search for food. This also makes me add weed to the farm, the weed gonna be eaten by sheep, and you need to pull it before planting anything.&lt;/p></description></item><item><title>GameObject Name Redirector in Unity</title><link>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</link><pubDate>Wed, 11 May 2022 22:21:21 +0700</pubDate><guid>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</guid><description>&lt;h2 id="intro">Intro&lt;/h2>
-&lt;p>A few days ago my friend stumbled across a problem because of the usage of &lt;code>GameObject.Find&lt;/code>, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.&lt;/p>
-&lt;p>In Unity, There is &lt;code>FormerlySerializedAsAttribute&lt;/code>, which is used to rename a field without losing its serialized value.&lt;/p>
-&lt;h2 id="structure">Structure&lt;/h2>
-&lt;p>&lt;img alt="Experimental-Tool-Redirector.drawio.png" loading="lazy" src="https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/img/structure.png">&lt;/p>
-&lt;h3 id="data">Data&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>GameObjects&lt;/p>
-&lt;p>This data comes from Unity Engine itself, to retrieve this I use&lt;/p></description></item><item><title>#1 Egg Farm Update</title><link>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</link><pubDate>Tue, 10 May 2022 21:38:10 +0700</pubDate><guid>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</guid><description>&lt;p>Welcome to the first update for Egg Farm, the game title may change in the future.&lt;/p>
-&lt;p>Egg Farm is a relaxing mini farming game, where you can just sit and interact with everything inside the game, plant crops, and ranch animals, and design your own farm.&lt;/p>
-&lt;p>Since this is a mini-game there will not be many features existing, although I still add more features that seem fun.&lt;/p>
-&lt;p>There is still more work that needs to be done to finish this game.&lt;/p></description></item><item><title>Unreal Engine Overflow</title><link>https://noodle-eater.github.io/posts/ue-overflow/</link><pubDate>Fri, 06 May 2022 21:42:25 +0700</pubDate><guid>https://noodle-eater.github.io/posts/ue-overflow/</guid><description>&lt;p>Recently, I start using Unreal Engine to develop games. I did not have proper C++ or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.&lt;/p>
-&lt;hr>
-&lt;h3 id="print-enum-into-fstring">Print &lt;code>Enum&lt;/code> Into &lt;code>FString&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>StaticEnum&lt;span style="color:#f92672">&amp;lt;&lt;/span>ENUM_TYPE&lt;span style="color:#f92672">&amp;gt;&lt;/span>()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>GetValueAsString(ENUM_VALUE)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="format-ftext">Format &lt;code>FText&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>FText format &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Item Name: {ItemName}&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> FText formattedText &lt;span style="color:#f92672">=&lt;/span> FText&lt;span style="color:#f92672">::&lt;/span>FormatNamed(FTextFormat(format), TEXT(&lt;span style="color:#e6db74">&amp;#34;ItemName&amp;#34;&lt;/span>), itemName);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="loop-udatatable">Loop &lt;code>UDataTable&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>itemDT&lt;span style="color:#f92672">-&amp;gt;&lt;/span>ForeachRow&lt;span style="color:#f92672">&amp;lt;&lt;/span>FItemInfo&lt;span style="color:#f92672">&amp;gt;&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;FindItem&amp;#34;&lt;/span>, [&lt;span style="color:#f92672">&amp;amp;&lt;/span>](&lt;span style="color:#66d9ef">const&lt;/span> FName&lt;span style="color:#f92672">&amp;amp;&lt;/span> key, &lt;span style="color:#66d9ef">const&lt;/span> FItemInfo&lt;span style="color:#f92672">&amp;amp;&lt;/span> item) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// Do something here
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="find-a-row-in-udatatable">Find a Row in &lt;code>UDataTable&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>FItemInfo&lt;span style="color:#f92672">*&lt;/span> itemInfo &lt;span style="color:#f92672">=&lt;/span> itemDT&lt;span style="color:#f92672">-&amp;gt;&lt;/span>FindRow&lt;span style="color:#f92672">&amp;lt;&lt;/span>FItemInfo&lt;span style="color:#f92672">&amp;gt;&lt;/span>(ROW_NAME, &lt;span style="color:#e6db74">&amp;#34;FindItem&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="create-uobject-instance">Create &lt;code>UObject&lt;/code> Instance&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>UTextBlock&lt;span style="color:#f92672">*&lt;/span> text &lt;span style="color:#f92672">=&lt;/span> NewObject&lt;span style="color:#f92672">&amp;lt;&lt;/span>UTextBlock&lt;span style="color:#f92672">&amp;gt;&lt;/span>(btn, FName(&lt;span style="color:#e6db74">&amp;#34;text&amp;#34;&lt;/span>));
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="hide-field-on-certain-condition">Hide Field on Certain Condition&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>UPROPERTY(EditAnywhere, meta&lt;span style="color:#f92672">=&lt;/span>(Condition&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;YOUR_CONDITION&amp;#34;&lt;/span>, EditConditionHides))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">float&lt;/span> speed;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="create-min-max-slider-for-field">Create Min Max Slider for Field&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>UPROPERTY(EditAnywhere, meta &lt;span style="color:#f92672">=&lt;/span> (ClampMin &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;1&amp;#34;&lt;/span>, ClampMax &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;10&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>int32 totalSpawned;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="instantiate-a-uobjectblueprintwbp">Instantiate a UObject/Blueprint/WBP&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>MyClass&lt;span style="color:#f92672">*&lt;/span> instance &lt;span style="color:#f92672">=&lt;/span> NewObject&lt;span style="color:#f92672">&amp;lt;&lt;/span>MyClass&lt;span style="color:#f92672">&amp;gt;&lt;/span>();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>TSubclassOf&lt;span style="color:#f92672">&amp;lt;&lt;/span>MyClass&lt;span style="color:#f92672">&amp;gt;&lt;/span> MyClassType;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// UObject Subclass
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>NewObject&lt;span style="color:#f92672">&amp;lt;&lt;/span>ActorClass&lt;span style="color:#f92672">&amp;gt;&lt;/span>(MyClassType);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Actor Subclass
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>GetWorld()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SpawnActor&lt;span style="color:#f92672">&amp;lt;&lt;/span>ActorClass&lt;span style="color:#f92672">&amp;gt;&lt;/span>(MyClassType);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Widget Subclass
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>MyWidget&lt;span style="color:#f92672">*&lt;/span> widget &lt;span style="color:#f92672">=&lt;/span> CreateWidget&lt;span style="color:#f92672">&amp;lt;&lt;/span>MyWidget&lt;span style="color:#f92672">&amp;gt;&lt;/span>(&lt;span style="color:#66d9ef">this&lt;/span>, MyWidgetType);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;p>The code above is not tested and is used for reference only.&lt;/p></description></item><item><title>Unity Automatic Localization System</title><link>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</link><pubDate>Mon, 02 May 2022 00:01:43 +0700</pubDate><guid>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</guid><description>&lt;p>Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.&lt;/p></description></item><item><title>Smart Framework</title><link>https://noodle-eater.github.io/posts/smart-framework/</link><pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate><guid>https://noodle-eater.github.io/posts/smart-framework/</guid><description>&lt;p>I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.&lt;/p>
-&lt;p>I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.&lt;/p>
-&lt;p>Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.&lt;/p></description></item><item><title>User Experience for Tools Development</title><link>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</link><pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate><guid>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</guid><description>&lt;p>Recently I learn a book about “&lt;a href="https://www.crcpress.com/Designing-the-User-Experience-of-Game-Development-Tools/Lightbown/p/book/9781482240191">Designing the User Experience of Game Development Tools&lt;/a>”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.&lt;/p>
-&lt;p>&lt;strong>What is User Experience?&lt;/strong>&lt;/p>
-&lt;p>There are many definitions of user experience. The popular one is from Elizabeth Sanders,&lt;/p>
-&lt;blockquote>
-&lt;p>Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;&lt;/p>&lt;/blockquote>
-&lt;p>&lt;strong>A. Useful&lt;/strong>&lt;/p>
-&lt;p>The tool you make must fulfil user needs, or it will be useless. Ideally, these needs come from users &amp;amp; stakeholders. Before creating your tools, you must know what your user &amp;amp; stakeholder needs, not what they want. You need to separate which one is needs &amp;amp; desire. Otherwise, you will have a bunch of tasks that you need to finish and it will make the development time longer.&lt;/p></description></item><item><title>Create in Game Console for Unity</title><link>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</link><pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate><guid>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</guid><description>&lt;h1 id="intro">Intro&lt;/h1>
-&lt;p>When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc.&lt;/p>
-&lt;p>In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device. We only need a specific log from the game. Or maybe simply because of the Laptop/PC is reached its limit so we can not open android studio.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Noodle Eater</title>
+    <link>https://noodle-eater.github.io/posts/</link>
+    <description>Recent content in Posts on Noodle Eater</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Aug 2022 17:00:32 +0700</lastBuildDate>
+    <atom:link href="https://noodle-eater.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity UI Binding Tools</title>
+      <link>https://noodle-eater.github.io/posts/ui-binding-unity/</link>
+      <pubDate>Mon, 15 Aug 2022 17:00:32 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/ui-binding-unity/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have &lt;code&gt;UPROPERTY(meta=(BindWidget))&lt;/code&gt; to binding UI variable declaration in the C++ code and the Widget.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UPROPERTY(meta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(BindWidget))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UTextBlock&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; TextBlock_PlayerName;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Unreal will bind that variable into the UI component that has the same type and name. And lately, I also see that Godot has its own binding, and they improve it in Godot 3.5. But, I do not find Unity built-in UI binding. I did not check the UI Toolkit yet or any other frameworks. So I decide to make my own binding inspired by Unreal.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enum Generator in Unity</title>
+      <link>https://noodle-eater.github.io/posts/enum-generator-in-unity/</link>
+      <pubDate>Fri, 12 Aug 2022 22:45:41 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/enum-generator-in-unity/</guid>
+      <description>&lt;p&gt;Do you ever think to use enum for making ID because it can be access the from code?&lt;/p&gt;
+&lt;p&gt;For long list of item id this is not really a good solution, but for short id this should be fine.&lt;/p&gt;
+&lt;h2 id=&#34;scriptableobject&#34;&gt;ScriptableObject&lt;/h2&gt;
+&lt;p&gt;ScriptableObject is used for the user interface of this generator because the user most likely wanna have more than one enum generator they can edit. In this ScriptableObject, we need to define directory, namespace, enum name and values.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>#2 Egg Farm Update</title>
+      <link>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</link>
+      <pubDate>Fri, 10 Jun 2022 21:57:37 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/devlog-02-egg-farm/</guid>
+      <description>&lt;p&gt;Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping me keep working on my games, I am glad start writing this blog actually. And these are the update of the game.&lt;/p&gt;
+&lt;h2 id=&#34;sheep&#34;&gt;Sheep&lt;/h2&gt;
+&lt;p&gt;Instead of putting the sheep inside a cage, I decide to let them roam in the field and search for food. This also makes me add weed to the farm, the weed gonna be eaten by sheep, and you need to pull it before planting anything.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GameObject Name Redirector in Unity</title>
+      <link>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</link>
+      <pubDate>Wed, 11 May 2022 22:21:21 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;A few days ago my friend stumbled across a problem because of the usage of &lt;code&gt;GameObject.Find&lt;/code&gt;, it can’t find the game object because the game object was renamed. So, I thought we can have something like Unreal Engine redirector to solve this problem.&lt;/p&gt;
+&lt;p&gt;In Unity, There is &lt;code&gt;FormerlySerializedAsAttribute&lt;/code&gt;, which is used to rename a field without losing its serialized value.&lt;/p&gt;
+&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Experimental-Tool-Redirector.drawio.png&#34; loading=&#34;lazy&#34; src=&#34;https://noodle-eater.github.io/posts/tool-unity-gameobject-redirector/img/structure.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GameObjects&lt;/p&gt;
+&lt;p&gt;This data comes from Unity Engine itself, to retrieve this I use&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>#1 Egg Farm Update</title>
+      <link>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</link>
+      <pubDate>Tue, 10 May 2022 21:38:10 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/devlog-01-egg-farm/</guid>
+      <description>&lt;p&gt;Welcome to the first update for Egg Farm, the game title may change in the future.&lt;/p&gt;
+&lt;p&gt;Egg Farm is a relaxing mini farming game, where you can just sit and interact with everything inside the game, plant crops, and ranch animals, and design your own farm.&lt;/p&gt;
+&lt;p&gt;Since this is a mini-game there will not be many features existing, although I still add more features that seem fun.&lt;/p&gt;
+&lt;p&gt;There is still more work that needs to be done to finish this game.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unreal Engine Overflow</title>
+      <link>https://noodle-eater.github.io/posts/ue-overflow/</link>
+      <pubDate>Fri, 06 May 2022 21:42:25 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/ue-overflow/</guid>
+      <description>&lt;p&gt;Recently, I start using Unreal Engine to develop games. I did not have proper C++ or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems. So I decide to make some notes that I can use and share with others.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;print-enum-into-fstring&#34;&gt;Print &lt;code&gt;Enum&lt;/code&gt; Into &lt;code&gt;FString&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;StaticEnum&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;ENUM_TYPE&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;()&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;GetValueAsString(ENUM_VALUE)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;format-ftext&#34;&gt;Format &lt;code&gt;FText&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FText format &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Item Name: {ItemName}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; FText formattedText &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; FText&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;FormatNamed(FTextFormat(format), TEXT(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ItemName&amp;#34;&lt;/span&gt;), itemName);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;loop-udatatable&#34;&gt;Loop &lt;code&gt;UDataTable&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;itemDT&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;ForeachRow&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;FItemInfo&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FindItem&amp;#34;&lt;/span&gt;, [&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;](&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; FName&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; key, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; FItemInfo&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; item) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Do something here
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-a-row-in-udatatable&#34;&gt;Find a Row in &lt;code&gt;UDataTable&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FItemInfo&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; itemInfo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; itemDT&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;FindRow&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;FItemInfo&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(ROW_NAME, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FindItem&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-uobject-instance&#34;&gt;Create &lt;code&gt;UObject&lt;/code&gt; Instance&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UTextBlock&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; NewObject&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;UTextBlock&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(btn, FName(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hide-field-on-certain-condition&#34;&gt;Hide Field on Certain Condition&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UPROPERTY(EditAnywhere, meta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(Condition&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YOUR_CONDITION&amp;#34;&lt;/span&gt;, EditConditionHides))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; speed;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-min-max-slider-for-field&#34;&gt;Create Min Max Slider for Field&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UPROPERTY(EditAnywhere, meta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (ClampMin &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;, ClampMax &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;int32 totalSpawned;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;instantiate-a-uobjectblueprintwbp&#34;&gt;Instantiate a UObject/Blueprint/WBP&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MyClass&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; instance &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; NewObject&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;MyClass&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TSubclassOf&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;MyClass&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; MyClassType;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// UObject Subclass
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;NewObject&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;ActorClass&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(MyClassType);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Actor Subclass
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;GetWorld()&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;SpawnActor&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;ActorClass&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(MyClassType);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Widget Subclass
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;MyWidget&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; widget &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; CreateWidget&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;MyWidget&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;, MyWidgetType);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;The code above is not tested and is used for reference only.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unity Automatic Localization System</title>
+      <link>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</link>
+      <pubDate>Mon, 02 May 2022 00:01:43 +0700</pubDate>
+      <guid>https://noodle-eater.github.io/posts/unity-automatic-localization-system/</guid>
+      <description>&lt;p&gt;Previously I made a game using Unity3D with my friends where we need to handle localization sent by the server. while my friends focus on working with the game design, I deal with the localization. I show up with some ideas but I found all of them is not suitable, because the game has many texts inside to be found one by one. We need to store the text into a JSON file, we can write it again one by one into the JSON file, but it will take a while.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Smart Framework</title>
+      <link>https://noodle-eater.github.io/posts/smart-framework/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://noodle-eater.github.io/posts/smart-framework/</guid>
+      <description>&lt;p&gt;I believe all of us have a goal to achieve in life. but sometimes it just feels hard to achieve and we do not know where we should start.&lt;/p&gt;
+&lt;p&gt;I want to develop and publish my own games but as time pass, I feel pretty lazy, tired especially after work. I usually work on my games in my free times.&lt;/p&gt;
+&lt;p&gt;Last year, my senior told me about Smart Framework, I read about it but I failed to really understand it. Because the article I read that time is not pretty clear and to the point for me. But today in the meeting we talk about Smart Framework and I got more understanding of that framework.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>User Experience for Tools Development</title>
+      <link>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://noodle-eater.github.io/posts/ux-for-tools-programmer/</guid>
+      <description>&lt;p&gt;Recently I learn a book about “&lt;a href=&#34;https://www.crcpress.com/Designing-the-User-Experience-of-Game-Development-Tools/Lightbown/p/book/9781482240191&#34;&gt;Designing the User Experience of Game Development Tools&lt;/a&gt;”, the book is pretty straightforward and easy to understand. As a tools programmer, this is a book that I must read, to make my tools better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is User Experience?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are many definitions of user experience. The popular one is from Elizabeth Sanders,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tools need to be, &amp;ldquo;Useful, Usable and Desireable&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A. Useful&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The tool you make must fulfil user needs, or it will be useless. Ideally, these needs come from users &amp;amp; stakeholders. Before creating your tools, you must know what your user &amp;amp; stakeholder needs, not what they want. You need to separate which one is needs &amp;amp; desire. Otherwise, you will have a bunch of tasks that you need to finish and it will make the development time longer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create in Game Console for Unity</title>
+      <link>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noodle-eater.github.io/posts/create-in-game-console-for-unity/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or framework, but how if I wanna look the log from the game when it already becomes executable files e.g .exe, .apk etc.&lt;/p&gt;
+&lt;p&gt;In Android, you can open a terminal and show the log cat but the experience is painful since it shows all the log from your android device too, or you can open android studio and take a look at the log cat there, but sometimes we do not need all the log from our device. We only need a specific log from the game. Or maybe simply because of the Laptop/PC is reached its limit so we can not open android studio.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
