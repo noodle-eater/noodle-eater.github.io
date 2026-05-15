@@ -39,3 +39,7 @@ url = "https://github.com/noodle-eater"
 # [[languages.en.menu.main]]
 # name = "Discord"
 # url = "https://discord.gg/ahpmTvhVmp"
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
