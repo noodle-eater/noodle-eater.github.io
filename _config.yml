@@ -6,12 +6,12 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon
 locale: "en-US"
 title: "Noodle Eater"
 title_separator: "-"
-subtitle: "A Jekyll site"
-name: "Noodle Eater"
-description: "A static site built with Jekyll and the Minimal Mistakes theme."
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+subtitle:
+name: "A. Hamdani"
+description: "Personal site and devlog of A. Hamdani, gameplay programmer."
+url: "https://noodle-eater.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
-repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository: "noodle-eater/noodle-eater.github.io"
 search: true # true, false (default)
 search_full_content: false
 
@@ -92,21 +92,38 @@ plugins:
 
 # Site Author
 author:
-  name: "Your Name"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "I write things here."
-  location: "Somewhere"
+  name: "A. Hamdani"
+  avatar: "/assets/images/bio-photo.png"
+  bio: "Gameplay Programmer"
   links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://x.com/_noodleeater"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/amdhamdani/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/noodle-eater"
+    - label: "itch.io"
+      icon: "fab fa-fw fa-itch-io"
+      url: "https://noodle-eater.itch.io/"
 
 # Site Footer
 footer:
   links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://x.com/_noodleeater"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/amdhamdani/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/noodle-eater"
+    - label: "itch.io"
+      icon: "fab fa-fw fa-itch-io"
+      url: "https://noodle-eater.itch.io/"
 
 # Defaults
 defaults:
