@@ -1,7 +1,11 @@
 ---
 title: "Create in Game Console for Unity"
+excerpt: >-
+  When you working on your game, you also want to debug, know the process of your game, take a look at the log you create for that game. It’s easy to take a look at the log in the game engine or…
 date: 2020-01-23
 tags: ["tool"]
+header:
+  teaser: /assets/images/posts/create-in-game-console-for-unity/android-log.png
 ---
 
 # Intro

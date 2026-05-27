@@ -1,7 +1,11 @@
 ---
 title: "GameObject Name Redirector in Unity"
+excerpt: >-
+  A few days ago my friend stumbled across a problem because of the usage of GameObject.Find, it can’t find the game object because the game object was renamed. So, I thought we can have something like…
 date: 2022-05-11T22:21:21+07:00
 tags: ["tool"]
+header:
+  teaser: /assets/images/posts/tool-unity-gameobject-redirector/structure.png
 ---
 
 ## Intro

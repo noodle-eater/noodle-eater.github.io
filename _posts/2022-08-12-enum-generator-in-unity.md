@@ -1,7 +1,11 @@
 ---
 title: "Enum Generator in Unity"
+excerpt: >-
+  Do you ever think to use enum for making ID because it can be access the from code?
 date: 2022-08-12T22:45:41+07:00
 tags: ["tool"]
+header:
+  teaser: /assets/images/posts/enum-generator-in-unity/enum-so.png
 ---
 
 Do you ever think to use enum for making ID because it can be access the from code?

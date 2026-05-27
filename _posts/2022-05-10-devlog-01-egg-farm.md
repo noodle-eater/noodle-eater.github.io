@@ -1,7 +1,11 @@
 ---
 title: "#1 Egg Farm Update"
+excerpt: >-
+  Welcome to the first update for Egg Farm, the game title may change in the future.
 date: 2022-05-10T21:38:10+07:00
 tags: ["blog"]
+header:
+  teaser: /assets/images/posts/devlog-01-egg-farm/plant.png
 ---
 
 Welcome to the first update for Egg Farm, the game title may change in the future.

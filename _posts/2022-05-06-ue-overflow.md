@@ -1,5 +1,7 @@
 ---
 title: "Unreal Engine Overflow"
+excerpt: >-
+  Recently, I start using Unreal Engine to develop games. I did not have proper C++ or Unreal Engine knowledge, I usually use Unity and C#. While learning and using it, I stumbled across some problems.…
 date: 2022-05-06T21:42:25+07:00
 tags: ["blog"]
 ---

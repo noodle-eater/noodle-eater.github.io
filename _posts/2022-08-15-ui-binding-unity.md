@@ -1,7 +1,11 @@
 ---
 title: "Unity UI Binding Tools"
+excerpt: >-
+  I’ve been using unreal for sometimes and it’s a pretty amazing engine. I found that they have UPROPERTY(meta=(BindWidget)) to binding UI variable declaration in the C++ code and the Widget.
 date: 2022-08-15T17:00:32+07:00
 tags: ["tools"]
+header:
+  teaser: /assets/images/posts/ui-binding-unity/scene.png
 ---
 
 ## Intro

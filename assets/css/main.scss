@@ -1,0 +1,51 @@
+---
+# Main stylesheet. The front matter (these dashes) is required so Jekyll
+# processes the Liquid below and compiles the Sass.
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main theme partials
+
+/* ===================================================================
+   Custom overrides — home grid cards (Devtricks-style)
+   =================================================================== */
+
+/* Uniform, cropped teaser thumbnails so every card lines up */
+.archive__item-teaser {
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* Grid cards: consistent spacing + always-visible, clamped excerpt
+   (the theme hides the excerpt on narrow viewports by default) */
+.grid__item {
+  margin-bottom: 2em;
+
+  .archive__item-title {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    font-size: $type-size-5;
+  }
+
+  .page__meta {
+    margin: 0 0 0.25em;
+  }
+
+  .archive__item-excerpt {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0;
+    font-size: $type-size-6;
+  }
+}

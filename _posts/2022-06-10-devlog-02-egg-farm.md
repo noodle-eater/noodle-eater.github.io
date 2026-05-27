@@ -1,7 +1,11 @@
 ---
 title: "#2 Egg Farm Update"
+excerpt: >-
+  Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping…
 date: 2022-06-10T21:57:37+07:00
 tags: ["blog"]
+header:
+  teaser: /assets/images/posts/devlog-02-egg-farm/sheep.png
 ---
 
 Welcome to the second update of my farming game, lately I start to lose my motivation to continue this game, I still work on the game and push my self to finish it. Writing this blog is also helping me keep working on my games, I am glad start writing this blog actually. And these are the update of the game.
