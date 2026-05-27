@@ -5,8 +5,8 @@ layout: single
 author_profile: true
 ---
 
-This is a static site built with [Jekyll](https://jekyllrb.com/) and the
-[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme,
-running in the **dark** skin.
-
-Edit `_pages/about.md` to put your own content here.
+I'm a gameplay programmer passionate about building games and tools that create
+positive experiences for both players and developers. With a background in game
+development and tool programming, I enjoy solving complex problems, streamlining
+workflows, and contributing to projects that blend creativity with technology to
+make a meaningful impact.
