@@ -69,6 +69,50 @@ While working on the spellchecking script, I encountered a few issues:
 
 You can run the script directly from PyCharm or within Unreal Engine by navigating to **Tools > Execute Python Script**.
 
+```python
+import polib
+from spellchecker import SpellChecker
+
+# Initialize the spellchecker (set language, e.g., 'en' for English)
+spell = SpellChecker(language='en')
+
+# Define the path to your exported `.po` file
+po_file_path = "D:/UE/UE_Tutorial/Content/Localization/Game/en/Game.po"
+
+# Load the `.po` file
+po = polib.pofile(po_file_path)
+
+# Iterate over each entry in the `.po` file
+for entry in po:
+    if entry.msgstr:  # Only process translated text
+        # Split the translation into words
+        words = entry.msgstr.split()
+
+        # Identify misspelled words
+        misspelled = spell.unknown(words)
+
+        if misspelled:
+            print(f"Misspelled words in entry '{entry.msgid}': {misspelled}")
+
+            # Optionally: Suggest corrections
+            for word in misspelled:
+                suggestions = spell.candidates(word)
+                print(f"Suggestions for '{word}': {', '.join(suggestions)}")
+
+            # Optionally: Replace misspelled words with the first suggestion
+            corrected_words = [
+                spell.correction(word) if word in misspelled else word
+                for word in words
+            ]
+            entry.msgstr = " ".join(corrected_words)  # Update the translation
+
+# Save the corrected `.po` file
+corrected_po_path = "D:/UE/UE_Tutorial/Content/Localization/Game/en/Game_Correct.po"
+po.save(corrected_po_path)
+
+print(f"Corrected translations saved to {corrected_po_path}")
+```
+
 In the Python script, we only process the **msgstr** fields, as these contain translatable text that we can modify. The **msgid** fields, on the other hand, are used internally to link the source content with its corresponding translation and should remain unchanged. Below is the output result of the script, showing how the spellchecker identifies and suggests corrections for misspelled translation text.
 
 ```
