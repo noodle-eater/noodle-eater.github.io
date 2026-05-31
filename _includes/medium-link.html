@@ -1,0 +1,19 @@
+{% comment %}
+  Cross-post link to Medium.
+
+  Usage (at the bottom of any post that's also on Medium):
+
+      {% include medium-link.html url="https://medium.com/@your-handle/slug" %}
+
+  Renders a small italic note with the Medium icon, linking to the Medium
+  version. Pair this with Medium's "Import a story" feature so the canonical
+  URL on Medium points back to this blog (good for SEO).
+{% endcomment %}
+{%- if include.url -%}
+<p class="cross-post-link" style="margin-top: 2em; font-size: 0.9em; color: var(--global-muted-color, inherit);">
+  <em>
+    <i class="fab fa-medium" aria-hidden="true"></i>&nbsp;Also published on
+    <a href="{{ include.url }}" target="_blank" rel="noopener">Medium</a>.
+  </em>
+</p>
+{%- endif -%}

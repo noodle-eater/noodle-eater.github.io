@@ -139,4 +139,4 @@ To enhance the script, we can integrate it into the Unreal Engine build pipeline
 
 Thank you for reading till the end! I hope this guide was helpful or sparked some new ideas for your own projects. Have a great day!
 
-*Originally published on [Medium](https://noodle-eater.medium.com/coding-quest-automating-spellchecking-for-unreal-engine-5-localization-bbcd5bc07c66).*
+{% include medium-link.html url="https://noodle-eater.medium.com/coding-quest-automating-spellchecking-for-unreal-engine-5-localization-bbcd5bc07c66" %}
